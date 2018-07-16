@@ -1,2 +1,2 @@
-# py-repo
-py fundamentals
+## __init__.py
+"learning by doing"
