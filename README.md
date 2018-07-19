@@ -1,5 +1,3 @@
 ## __ __init__ __.py
-some python fundamentals. 
-### 16 Jul 2018
 
-- _learn by doing_
+this repository includes some of python codes that I created during summer vacation for learning python.
