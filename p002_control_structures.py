@@ -29,3 +29,21 @@ if (False == (False or True)):
 
 if ( not True ): # priority --> not, and, or
     print("TTT")
+
+print("")
+# using a break statement outside of a loop causes an error
+
+i = 0
+while True:
+   i = i +1
+   if i == 2:
+      print("Skipping 2")
+      continue
+   if i == 5:
+      print("Breaking")
+      break
+   print(i)
+
+print("Finished")
+
+    
