@@ -51,3 +51,49 @@ def shout(word):
 
 shout("spam")
 
+def multiply(x, y):
+   return x * y
+
+a = 4
+b = 7
+operation = multiply
+print(operation(a, b))
+
+print("")
+
+something = print
+something("hello man")
+
+print("-----------------")
+
+# def add():
+#    return 5+3
+# def twice():
+#    return add()+add()
+# print( twice() ) # 16
+
+# def add(x,y):
+#    return x+y
+# def twice():
+#    xa=5
+#    ya=3
+#    return add(xa,ya)+add(xa,ya)
+# print( twice() ) # 16
+#
+# def add(x,y):
+#    return x+y
+# def twice(add,x,y):
+#    return add(x,y)+add(x,y)
+# print ( twice(add,5,3) ) # 16
+#
+def add(x,y):
+   return x+y
+def twice(add,x,y):
+   return add(add(x,y),add(x,y))
+print ( twice(add,5,3) )
+
+def car(d, f):
+    return d+f
+def carpet(car, d, f):
+    return car(car(d, f), car(d, f))
+print( carpet(car, 16, 4) )
