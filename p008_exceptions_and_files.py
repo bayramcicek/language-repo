@@ -66,12 +66,9 @@ if user_type == "user":
   except:
      print("An error occurred")
 
-elif user_type ==  ('Developer' or 'Programmer'):
+elif user_type ==  ('Developer' or 'Programmer').lower():
   try:
      num = 5 / 0
   except:
      print("An error occurred")
      raise
-
-
-
