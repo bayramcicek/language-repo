@@ -2,7 +2,7 @@
 # created by cicek on 03.09.2018 16:35
 
 class Cat:
-    def __init__(self, color, legs):
+    def __init__(self, color, legs): # instance variables
         self.color = color
         self.legs= legs
 
