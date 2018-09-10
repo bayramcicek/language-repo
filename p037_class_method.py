@@ -36,7 +36,7 @@ Always use cls for the first argument to class methods.
 print("--------------------")
 
 # new_square is a class method and is called on the class, rather than on an instance of the class.
-# It returns a new object of the class cls
+# It returns a new object of the class cls.
 
 '''
 Technically, the parameters self and cls are just conventions; they could be changed to anything else.
