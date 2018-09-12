@@ -112,7 +112,7 @@ print(match.end()) # 9
 print("--------------------------------------\n")
 
 '''Syntax:
-        re.sub(patternStr, replStr, maşnString, max=0)'''
+        re.sub(patternStr, replStr, mainString, max=0)'''
 
 mainStr = "My name is David. Hi David. Selam David."
 pattern = r"David"
