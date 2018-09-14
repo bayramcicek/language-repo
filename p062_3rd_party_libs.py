@@ -1,0 +1,55 @@
+#!/usr/bin/python3.6
+# created by cicek on 14.09.2018 20:45
+
+'''
+Major 3rd-Party Libraries
+
+The Python standard library alone contains extensive functionality.
+However, some tasks require the use of third-party libraries.
+Some major third-party libraries:
+Django: The most frequently used web framework written in Python,
+Django powers websites that include Instagram and Disqus. It has many
+useful features, and whatever features it lacks are covered by extension
+packages. CherryPy and Flask are also popular web frameworks.
+
+For scraping data from websites, the library BeautifulSoup is very useful,
+and leads to better results than building your own scraper with regular expressions.
+While Python does offer modules for programmatically accessing websites, such as
+urllib, they are quite cumbersome to use. Third-party library requests make it much
+easier to use HTTP requests.
+'''
+
+print( '''A number of third-party modules are available that make it much easier to carry out scientific
+and mathematical computing with Python.
+# The module matplotlib allows you to create graphs based on data in Python.''')
+
+'''
+The module NumPy allows for the use of multidimensional arrays that are much faster than the native Python solution of nested lists.
+It also contains functions to perform mathematical operations such as matrix transformations on the arrays. 
+'''
+
+# The library SciPy contains numerous extensions to the functionality of NumPy.
+
+# Python can also be used for game development.
+# Usually, it is used as a scripting language for
+# games written in other languages, but it can be used to make games by itself.
+
+print("\n For 3D games, the library Panda3D can be used. For 2D games, you can use pygame. ")
+
+# As they are 3rd party modules we have to install by using
+# pip install numpy, matplotlib,scipy
+
+# The pip command is a tool for installing and managing Python packages,
+# such as those found in the Python Package Index.
+
+# for GUI development PyQt is the best
+
+'''
+A package is a collection of python modules under a common namespace.
+In practice one is created by placing multiple python modules in a directory with a
+special __init__.py module (file).
+
+A module is a single file of python code that is meant to be imported.
+This is a bit of a simplification since in practice quite a few modules
+detect when they are run as script and do something special in that case.
+'''
