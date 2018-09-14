@@ -19,12 +19,13 @@ urllib, they are quite cumbersome to use. Third-party library requests make it m
 easier to use HTTP requests.
 '''
 
-print( '''A number of third-party modules are available that make it much easier to carry out scientific
+'''A number of third-party modules are available that make it much easier to carry out scientific
 and mathematical computing with Python.
-# The module matplotlib allows you to create graphs based on data in Python.''')
+# The module matplotlib allows you to create graphs based on data in Python.'''
 
 '''
-The module NumPy allows for the use of multidimensional arrays that are much faster than the native Python solution of nested lists.
+The module NumPy allows for the use of multidimensional arrays that are much faster than the
+native Python solution of nested lists.
 It also contains functions to perform mathematical operations such as matrix transformations on the arrays. 
 '''
 
@@ -34,7 +35,7 @@ It also contains functions to perform mathematical operations such as matrix tra
 # Usually, it is used as a scripting language for
 # games written in other languages, but it can be used to make games by itself.
 
-print("\n For 3D games, the library Panda3D can be used. For 2D games, you can use pygame. ")
+For 3D games, the library Panda3D can be used. For 2D games, you can use pygame.
 
 # As they are 3rd party modules we have to install by using
 # pip install numpy, matplotlib,scipy
