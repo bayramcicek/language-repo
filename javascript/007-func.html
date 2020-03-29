@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+ 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript :) </title>
+	</head>
+
+	<body>
+		<p>ctrl+k+b</p>
+		<p>ctrl+shift+p  then vmen</p>
+
+		<script type="text/javascript">
+			// JavaScript offers three types of popup boxes, the Alert, Prompt, and Confirm boxes.
+			alert("How \n are \n you?"); 
+
+			/* The prompt() method takes two parameters. 
+ 			The first is the label, which you want to display in the text box.
+		 	The second is a default string to display in the text box (optional). */
+
+		 	var user = prompt("Please enter your name", "name");
+			alert(user);
+ 
+ 			// confirm box
+
+ 			var result = confirm("Do you really want to leave this page?");
+			if (result == true) {
+			  alert("Thanks for visiting");
+			}
+			else {
+			  alert("Thanks for staying with us");
+			}
+
+
+
+
+		</script>
+
+		<script type="text/javascript">
+			
+			function myFunction(a, b) {
+			   return a * b;
+			}
+
+			var x = myFunction(5, 6); 
+			// Return value will end up in x
+			// x equals 30
+
+			document.write("<br>", x);
+
+		</script>
+		
+		
+	
+	</body>
+
+</html>

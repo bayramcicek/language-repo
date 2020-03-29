@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+ 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript :) </title>
+		<script type="text/javascript" src="./demo07_time.js"></script>
+	</head>
+
+	<body>
+		<p id="s1">ctrl+k+b</p>
+		<p>ctrl+shift+p  then vmen</p>
+
+		<button onclick="clearMe()">Try it</button>
+		
+		<h3>Using new Date(), create a new date object with the current date and time.</h3>
+	
+		<pre>
+			new Date(milliseconds)
+			new Date(dateString)
+			new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+JavaScript dates are calculated in milliseconds from 01 January, 1970 00:00:00 Universal Time (UTC). One day contains 86,400,000 millisecond.
+
+new Date().toLocaleString('en-US', {timeZone: 'America/Houston'});
+or
+new Date().toLocaleString('en-GB', {timeZone: 'Europe/London'});
+
+As in example 
+var d2 = new Date("January 2, 2015 10:42:00");
+
+var d = new Date(2017, 5, 14, 9, 9, 9);
+document.write(d);
+will give you today:
+Wed Jun 14 2017 09:09:09
+		</pre>
+	</body>
+
+</html>
