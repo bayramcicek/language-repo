@@ -1,0 +1,36 @@
+﻿table, th, td {
+					border:1px solid black;
+					/*border-collapse:collapse; /*       tek çizgi oluşmasını sağlar      */
+				
+				}
+				
+th, td {
+padding: 3px; /*  boşluk bırakır  */
+				
+}
+				
+th {
+text-align: center;
+	
+}
+
+table {
+	border-spacing:5px; /*  If the table has collapsed borders, border-spacing has no effect.*/
+}
+
+table#t01{/* bitişik olacak */
+	width:100%;
+	background-color:#FFCCFF;
+}
+
+}
+table#t02 tr:nth-child(even) {
+    background-color: #00FF00;
+}
+table#t02 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t02 th {
+    background-color: black;
+    color: white;
+}

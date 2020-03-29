@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ders</title>
+		
+		<style>
+		[class|="top"] {
+			background: yellow;
+		}
+		</style>
+		
+		<style>
+		[class^="atop"] {
+			background: yellow;
+		}
+		</style>
+		
+		<style> 
+		[class$="test"] {
+			background: cyan;
+		}
+		</style>
+		
+		<style> 
+		[class*="asd"] {
+			background: black;
+		}
+		</style>
+		
+		<style>
+		input[type="text"] {
+			width: 150px;
+			display: block;
+			margin-bottom: 10px;
+			background-color: yellow;
+		}
+
+		input[type="button"] {
+			width: 120px;
+			margin-left: 35px;
+			display: block;
+		}
+		</style>
+
+	</head>
+
+	<body>
+		
+		<h1 class="top-header">Welcome CSS [attribute|="value"] Selector</h1>
+		<p class="top-text">Hello world!</p>
+		<p class="topcontent">Are you learning CSS?</p>
+
+		<p><b>Note:</b> For [<i>attribute</i>|=<i>value</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+		<p>Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! </p>
+		
+		<h1 class="atop-header">Welcome begins with a specified value. [attribute^="value"]</h1>
+		<p class="atop-text">Hello world!</p>
+		<p class="atopcontent">Are you learning CSS?</p>
+		
+		<div class="first_test">The first div element. [attribute$="value"]</div>
+		<div class="second">The second div element.</div>
+		<div class="my-test">The third div element.</div>
+		<div class="mytest">This is some text in a paragraph.</div>
+		&nbsp &nbsp &nbsp &nbsp <p></p>
+		<div class="first_test">The first div element asd. [attribute*="value"]</div>
+		<div class="second">The second div eleasdment.</div>
+		<div class="my-test">The third div element.</div>
+		<div class="mytest">This is some teasdxt in a paragraph.</div>
+		
+		<form name="input" action="" method="get">
+		  Firstname:<input type="text" name="Name" value="Peter" size="20">
+		  Lastname:<input type="text" name="Name" value="Griffin" size="20">
+		  <input type="button" value="Example Button">
+		</form>
+		
+	
+	</body>
+
+</html>

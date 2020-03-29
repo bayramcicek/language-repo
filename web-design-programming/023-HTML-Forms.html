@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset = "utf-8">
+		<title>HTML Forms</title>
+
+	</head>
+
+	<body>
+		<form action="https://www.w3schools.com" target="_blank">
+			
+		Name:<input type="text" name="name" value=" ">
+		Surname:<input type="text" name="surname" value=" ">
+		<br><br>
+			
+		<input type="submit" value="SubmitMe">
+		</form>
+		
+		<p>If you click the "Submit" button, the form-data <br>
+		will be sent to a page called "/action_page.php".</p>
+	
+		<!--
+		
+		<input type="text">	        Defines a one-line text input field
+		<input type="radio">	    Defines a radio button (for selecting one of many choices)
+		<input type="submit">	    Defines a submit button (for submitting the form)
+		
+		--> 
+		
+		<form>
+		  First name:<br>
+		  <input type="text" name="firstname" method="post">
+		  <br>
+		  Last name:<br>
+		  <input type="text" name="lastname">
+		  <input type="submit" value="Submit">
+
+		</form>
+	
+		<p>Note that the form itself is not visible.</p>
+
+		<p>Also note that the default width of a text input field is 20 characters.</p>
+		
+		<form>
+		  <input type="radio" name="gender" value="male" checked> Male<br/>
+		  <input type="radio" name="gender" value="female"> Female<br/>
+		  <input type="radio" name="gender" value="other"> Other  
+		</form>
+		
+		
+		<p> Note: GET must NOT be used when sending sensitive information! GET is best suited for short, <br>
+		non-sensitive, amounts of data, because it has size limitations too.</p>
+		
+		<p>When to Use POST?<br>
+Always use POST if the form data contains sensitive or personal information. <br>
+The POST method does not display the submitted form data in the page address field.<br>
+
+POST has no size limitations, and can be used to send large amounts of data.</p>
+
+	<form action="/action_page.php">
+	
+	  First name:<br>
+	  <input type="text" value="Mickey"><br>
+	  
+	  <p>This example will only submit the "Last name" input field:</p> 
+	   
+	  Last name:<br>
+	  <input type="text" name="lastname" value="Mouse"><br><br>
+	  <input type="submit" value="Submit">
+	  
+	</form>
+	
+	<form action="/action_page.php">
+	
+	
+	<h3>The  &lt fieldset &gt element is used to group related data in a form.<br>
+
+The &lt legend &gt element defines a caption for the fieldset element.</h3>
+	
+	  <fieldset>
+	  
+		<legend>Personal information:</legend>
+		
+		First name:<br>
+		<input type="text" name="firstname" value="Mickey">
+		<br>
+		Last name:<br>
+		<input type="text" name="lastname" value="Mouse">
+		<br><br>
+		<input type="submit" value="Submit">
+		
+	  </fieldset>
+	  
+	</form>
+
+	<h2>Send e-mail to someone@example.com:</h2>
+
+		<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+			Name:<br/>
+			<input type="text" name="name"><br/>
+			E-mail:<br/>
+			<input type="text" name="mail"><br/>
+			Comment:<br/>
+			<input type="text" name="comment" size="50"><br/><br/>
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset">
+		</form>
+
+	<h1>Here is the list of &lt form &gt attributes:</h1>
+
+		<p>Attribute	&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         Description<br/><br/><br/>
+		
+		accept-charset	    &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        Specifies the charset used in the submitted form (default: the page charset).<br/>
+		action	           &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        Specifies an address (url) where to submit the form (default: the submitting page).<br/>
+		autocomplete	  &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Specifies if the browser should autocomplete the form (default: on).<br/>
+		enctype	          &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Specifies the encoding of the submitted data (default: is url-encoded).<br/>
+		method	          &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Specifies the HTTP method used when submitting the form (default: GET).<br/>
+		name	          &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Specifies a name used to identify the form (for DOM usage: document.forms.name).<br/>
+		novalidate	     &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           Specifies that the browser should not validate the form.<br/>
+		target	          &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Specifies the target of the address in the action attribute (default: _self).
+	
+		</p>
+
+	</body>
+
+</html>

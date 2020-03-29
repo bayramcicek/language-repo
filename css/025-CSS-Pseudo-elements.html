@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+		
+		<style>
+		p.id1::first-line {
+			color: #ff0000;
+			font-variant: small-caps;
+		}
+		</style>
+		
+		<style>
+		p.id2::first-letter {
+			color: #ff0000;
+			font-size: xx-large;
+		}
+		</style>
+		
+		<style>
+		p.id3::first-letter {
+			color: #ff0000;
+			font-size: xx-large;
+		}
+
+		p.id3::first-line {
+			color: #0000ff;
+			font-variant: small-caps;
+		}
+		</style>
+		
+		<style>
+		h1::before { /*after*/
+			content: url(./smiley.gif);
+		}
+		</style>
+		
+		<style>
+		::-moz-selection { /* Code for Firefox */
+			color: red;
+			background: yellow;
+		}
+
+		::selection {
+			color: red;
+			background: yellow;
+		}
+		</style>
+		
+	</head>
+
+	<body>
+		
+		<pre>
+selector::pseudo-element {
+   property:value;
+}
+		</pre>
+		
+<p>The <span><pre>::first-line</pre></span> pseudo-element is used to add a special style to the first line of a text.
+
+The following example formats the first line of the text in all &lt p &gt elements:</p>
+		
+		<p class="id1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text.<br>
+			Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+		
+		<p class="id2">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+		
+		<p class="id3">You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+		
+		<h1>This is a heading</h1>
+	<p>The ::before pseudo-element inserts content before the content of an element.</p>
+		
+	</body>
+
+</html>

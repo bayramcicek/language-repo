@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML Video</title>
+
+	</head>
+
+	<body>
+	<!-- The HTML <video> Element
+	To show a video in HTML, use the <video> element:
+	-->
+	
+		<video width="320" height="240" controls>
+		<source src="movie.mp4" type="video/mp4">
+		<source src="movie.ogg" type="video/ogg">
+		  Your browser does not support the video tag.
+		</video>	
+		
+		<h1>How it Works</h1>
+		<p>The controls attribute adds video controls, like play, pause, and volume.</p>
+		<!--
+			It is a good idea to always include width and height attributes.
+			If height and width are not set, the page might flicker while the video loads.
+
+			The <source> element allows you to specify alternative 
+			video files which the browser may choose from. The browser will use the first recognized format.
+
+			The text between the <video> and </video> tags will only 
+			be displayed in browsers that do not support the <video> element.
+		-->
+		
+		<p>HTML --video-- Autoplay
+To start a video automatically use the autoplay attribute</p>
+
+		<video width="320" height="240" autoplay controls>
+	  <source src="movie.mp4" type="video/mp4">
+	  <source src="movie.ogg" type="video/ogg">
+	Your browser does not support the video tag.
+	</video>
+	
+	<p>The autoplay attribute does not work in mobile devices like iPad and iPhone.</p>
+	
+	<!--
+	
+	HTML Video - Browser Support
+		In HTML5, there are 3 supported video formats: MP4, WebM, and Ogg.
+
+		The browser support for the different formats is:
+
+		Browser							MP4							WebM				Ogg
+		
+		Internet Explorer				YES							NO					NO
+		Chrome							YES							YES					YES
+		Firefox							YES							YES					YES
+		Safari							YES							NO					NO
+		Opera							YES (from Opera 25)			YES					YES
+	
+		-->
+		
+		<!--
+			File 			Format Media Type
+			
+			MP4				video/mp4
+			WebM			video/webm
+			Ogg				video/ogg
+		-->
+		
+		<div style="text-align:center"> 
+		
+	  <button onclick="playPause()">Play/Pause</button> 
+	  <button onclick="makeBig()">Big</button>
+	  <button onclick="makeSmall()">Small</button>
+	  <button onclick="makeNormal()">Normal</button>
+	  <br/><br/>
+	  
+	  <video id="video1" width="420">
+		<source src="movie.mp4" type="video/mp4">
+		<source src="movie.ogg" type="video/ogg">
+		Your browser does not support HTML5 video.
+	  </video>
+	  
+	</div> 
+
+	<script> 
+	var myVideo = document.getElementById("video1"); 
+
+	function playPause() { 
+		if (myVideo.paused) 
+			myVideo.play(); 
+		else 
+			myVideo.pause(); 
+	} 
+
+	function makeBig() { 
+		myVideo.width = 560; 
+	} 
+
+	function makeSmall() { 
+		myVideo.width = 320; 
+	} 
+
+	function makeNormal() { 
+		myVideo.width = 420; 
+	} 
+	</script> 
+
+	<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+	
+	<!--
+		Tag					Description
+			
+		<video>				Defines a video or movie
+		<source>			Defines multiple media resources for media elements, such as <video> and <audio>
+		<track>				Defines text tracks in media players
+	-->
+
+	</body>
+
+</html>

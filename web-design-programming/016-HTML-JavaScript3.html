@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset = "utf-8">
+		<title>J3</title>
+
+	</head>
+
+	<body>
+		<script>
+			function li(sw){
+				var pic;
+				
+				if (sw == 0){
+					pic="pic_bulboff.gif"
+				}
+				else{
+					pic="pic_bulbon.gif"
+				}
+				document.getElementById("myIMG").src=pic;
+			}
+		</script>
+		
+		<img id="myIMG" src="pic_bulboff.gif" width="100" height="180">
+		
+		<p>
+		<button type="button" onclick="li(1)">Light On</button>
+		<button type="button" onclick="li(0)">Light Off</button>
+		</p>
+		
+		<p id="asda"></p>
+		
+		<script>
+			document.getElementById("asda").innerHTML="hi JS !";
+		</script>
+		
+		<noscript>Sorry, your browser does not support JavaScript!</noscript>
+		
+		<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+	
+	</body>
+
+</html>

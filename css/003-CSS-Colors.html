@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ders</title>
+	</head>
+
+	<body>
+		
+		<p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+		<h1 style="background-color:Tomato;">Tomato</h1>
+		<h1 style="background-color:Orange;">Orange</h1>
+		
+		<a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">HTML supports 140 standard color names.</a>
+		
+		<p style="color:DodgerBlue;">Lorem ipsum... RGB, HEX, HSL, RGBA, HSLA</p>
+		
+		<h1 style="border:2px solid Tomato;">Hello World</h1>
+		<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+		<h1 style="border:2px solid Violet;">Hello World</h1>
+		
+		<p>Color Values<br>
+		In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values:
+
+		Same as color name "Tomato":</p>
+		
+		<h1 style="background-color:rgb(255, 99, 71);">Tomato</h1>
+		<h1 style="background-color:#ff6347;">Tomato</h1>
+		<h1 style="background-color:hsl(9, 100%, 64%);">Tomato</h1>
+		
+		<p>Same as color name "Tomato", but 50% transparent:</p>
+
+		<h1 style="background-color:rgba(255, 99, 71, 0.5);">Tomato</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">Tomato</h1>
+		
+		<p>rgb</p>
+		
+		<h1 style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h1>
+		<h1 style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h1>
+		
+		<p>Shades of gray are often defined using equal values for all the 3 light sources:</p>
+		<h1 style="background-color:#000000;">#000000</h1>
+		<h1 style="background-color:#3c3c3c;">#3c3c3c</h1>
+		<h1 style="background-color:#787878;">#787878</h1>
+		<h1 style="background-color:#b4b4b4;">#b4b4b4</h1>
+		<h1 style="background-color:#f0f0f0;">#f0f0f0</h1>
+		<h1 style="background-color:#ffffff;">#ffffff</h1>
+
+		<p>By using equal values for red, green, and blue, you will get different shades of gray.</p>
+		
+		<p>HSL Value</p>
+		<pre>
+hsl(hue, saturation, lightness) renk tonu, doymuşluk, parlaklık
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+
+
+		</pre>
+		<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</h1>
+		<h1 style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</h1>
+		<h1 style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h1>
+		
+		<pre>
+Saturation - doygunluk
+Saturation can be describe as the intensity of a color.
+
+100% is pure color, no shades of gray
+
+50% is 50% gray, but you can still see the color.
+
+0% is completely gray, you can no longer see the color.
+		</pre>
+		
+		<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h1>
+		
+		<p>Lightness</p>
+		
+		<h1 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h1>
+
+		<p>With HSL colors, 0% lightness means black, and 100 lightness means white.</p>
+		
+		<h1 style="background-color:hsl(0, 0%, 0%);">hsl(0, 0%, 0%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 24%);">hsl(0, 0%, 24%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 45%);">hsl(0, 0%, 47%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 71%);">hsl(0, 0%, 71%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 94%);">hsl(0, 0%, 94%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 100%);">hsl(0, 0%, 100%)</h1>
+
+		<p>With HSL colors, shades of gray are made by setting the saturation to 0%, and adjusting the lightness according to how dark/light the gray color should be.</p>
+		
+		<pre>
+RGBA Value
+RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.
+
+An RGBA color value is specified with:
+
+rgba(red, green, blue, alpha)
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+		</pre>
+		<h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+
+		<p>You can make transparent colors by using the RGBA color value.</p>
+		
+		<pre>
+HSLA Value
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.
+
+An HSLA color value is specified with:
+
+hsla(hue, saturation, lightness, alpha)
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+		</pre>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h1>
+
+		<p>You can make transparent colors by using the HSLA color value.</p>
+
+	</body>
+
+</html>

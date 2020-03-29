@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ders</title>
+		
+		<style>
+			p {
+				background-color: red;
+			}
+			body {
+				background-image: url("./wallpaper.jpg");
+				background-repeat: repeat-x;
+				/*  background-repeat: no-repeat;	*/
+				/*  background-position: right top; */
+   				/* 	margin-right: 300px;			*/
+   				/* 	background-attachment: fixed;   */ /* küçük resim sabit yazılar kaysın */
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<p>CSS background properties:</p>
+		<ul>
+		  <li>background-color</li>
+		  <li>background-image</li>
+		  <li>background-repeat</li>
+		  <li>background-attachment</li>
+		  <li>background-position</li>
+		</ul>
+		
+		<p>With CSS, a color is most often specified by:</p>
+		<ul>
+			<li>a valid color name - like "red"</li>
+			<li>a HEX value - like "#ff0000"</li>
+			<li>an RGB value - like "rgb(255,0,0)"</li>
+		</ul>
+		
+		<pre>If the image above is repeated only horizontally (background-repeat: repeat-x;), the background will look better</pre>
+		<pre>Tip: To repeat an image vertically, set background-repeat: repeat-y;</pre>
+		<h1>Background - Shorthand property: </h1>
+		<pre>
+body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+    margin-right: 200px;
+}
+		</pre>
+		
+		<pre>
+When using the shorthand property the order of the property values is:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+It does not matter if one of the property values is missing, as long as the other ones are in this order.
+		</pre>
+		
+		<h2>All CSS Background Properties</h2>
+		<pre>
+Property					Description
+
+background				Sets all the background properties in one declaration
+background-attachment			Sets whether a background image is fixed or scrolls with the rest of the page
+background-color			Sets the background color of an element
+background-image			Sets the background image for an element
+background-position			Sets the starting position of a background image
+background-repeat			Sets how a background image will be repeated
+		</pre>
+	
+	</body>
+
+</html>

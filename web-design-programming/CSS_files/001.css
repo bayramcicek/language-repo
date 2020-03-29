@@ -1,0 +1,22 @@
+﻿a:link {
+	font-size:30px;
+	font-family:arial black;
+}
+
+a:visited {            /* Normal renk */
+	color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {              /* Üstünde durunca renk */
+	color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {             /* Basılı tutunca renk */
+	color: #000000;
+    background-color: transparent;
+    text-decoration: underline;
+}

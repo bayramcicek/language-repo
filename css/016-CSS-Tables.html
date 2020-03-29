@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+		
+		<style>
+		#i table, #i td, #i th {
+			border: 1px solid #ddd;
+		}
+
+		#i {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#i td {
+			height: 50px;
+			vertical-align: bottom;
+		}
+		</style>
+	</head>
+
+	<body>
+		
+		<p>The border-collapse property sets whether the table borders should be collapsed into a single border:
+		</p>
+		
+		<pre>
+table {
+    border-collapse: collapse;
+}
+		</pre>	
+		<h2>Single Border Around The Table:</h2>
+		<pre>
+		instead of;
+		
+		table, th, td { bla bla bla } 
+		
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+		</pre>
+		
+		<pre>
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+		</pre>
+		
+		<h2>The vertical-align Property</h2>
+<p>This property sets the vertical alignment (like top, bottom, or middle) of the content in th or td.</p>
+<table id="i">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+</tr>
+</table>
+		
+		<h2>Bordered Table Dividers</h2>
+		<p>Add the border-bottom property to th and td for horizontal dividers:</p>
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+		<h3>Use the :hover selector on &lttr&gt to highlight table rows on mouse over:</h3>
+		<pre>tr:hover {background-color:#f5f5f5;}</pre>
+		
+		<h3>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</h3>
+		<pre>tr:nth-child(even) {background-color: #f2f2f2;}</pre>
+		
+		<h1>responsible table</h1>
+		
+		<pre>
+&ltdiv style="overflow-x:auto;"&gt
+
+&lttable&gt
+... table content ...
+&lt/table&gt
+
+&lt/div&gt
+		</pre>
+		
+	</body>
+
+</html>

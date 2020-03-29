@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ders</title>
+		
+		<style>
+		a[target] {
+			background-color: yellow;
+		}
+		
+		a[target="_blank"] { 
+			background-color: red;
+		}
+		</style>
+		
+		<style>
+		[title~=flower] {
+			border: 5px solid yellow;
+		}
+		</style>
+		
+	</head>
+
+	<body>
+		
+		<p>The links with a target attribute gets a yellow background:</p>
+
+		<a href="https://www.w3schools.com">w3schools.com</a>
+		<a href="http://www.disney.com" target="_blank">disney.com</a>
+		<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+		<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+		<p><b>Note:</b> For [<i>attribute</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+		
+		<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+		<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+		<img src="img_flwr.gif" title="flower" width="224" height="162">
+		<img src="img_tree.gif" title="tree" width="200" height="358">
+
+		<p><b>Note:</b> For [<i>attribute</i>~=<i>value</i>] to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+		<p>The example above will match elements with title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".</p>
+	
+	</body>
+
+</html>

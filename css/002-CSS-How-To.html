@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ders</title>
+		<link rel="stylesheet" href="002-CSS-How-To.css" type="text/css">
+		
+		<style>
+			h2 {font-size: 50px;}
+		</style>
+		
+	</head>
+
+	<body>
+		<p>There are three ways of inserting a style sheet</p>
+		<ul>
+			<li>External style sheet</li>
+			<li>Internal style sheet</li>
+			<li>Inline style</li>
+		</ul>
+	
+		<h1>External Style Sheet 002-CSS-How-To.css</h1>
+	
+		<h2>Internal Style Sheet head arası</h2>
+		
+		<p style="background-color:green; color:white;" >Inline Styles</p>
+		
+		<p>If the internal style is defined after the link to the external style sheet, the &lth1&gt elements will be internal style element</p>
+		<p>However, if the internal style is defined before the link to the external style sheet, the &lth1&gt elements will be external style element</p>
+		<p>en sonda olanı baz alır</p>
+		
+		<pre>
+		
+		Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+
+		Inline style (inside an HTML element)
+		External and internal style sheets (in the head section)
+		Browser default
+		So, an inline style (inside a specific HTML element) has the highest priority, which means that it will override a style defined inside the &lthead&gt
+		tag, or in an external style sheet, or a browser default value.
+
+
+
+		
+		</pre>
+		
+		
+		
+	</body>
+
+</html>

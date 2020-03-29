@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ders</title>
+		
+		<style>
+		p.dotted {border-style: dotted;}
+		p.dashed {border-style: dashed;}
+		p.solid {border-style: solid;}
+		p.double {border-style: double;}
+		p.groove {border-style: groove;}
+		p.ridge {border-style: ridge;}
+		p.inset {border-style: inset;}
+		p.outset {border-style: outset;}
+		p.none {border-style: none;}
+		p.hidden {border-style: hidden;}
+		p.mix {border-style: dotted dashed solid double;}
+		</style>
+		
+		<style>
+		p.one {
+			border-style: solid;
+			border-width: 5px;
+		}
+
+		p.two {
+			border-style: solid;
+			border-width: medium;
+		}
+
+		p.three {
+			border-style: dotted;
+			border-width: 2px;
+		}
+
+		p.four {
+			border-style: dotted;
+			border-width: thick;
+		}
+
+		p.five {
+			border-style: double;
+			border-width: 15px;
+		}
+
+		p.six {
+			border-style: double;
+			border-width: thick;
+		}
+
+		p.seven {
+			border-style: solid;
+			border-width: 2px 10px 4px 20px;
+		}
+		</style>
+		
+		<style>
+		p.one {
+			border-style: solid;
+			border-color: red;
+		}
+
+		p.two {
+			border-style: solid;
+			border-color: green;
+		} 
+
+		p.three {
+			border-style: solid;
+			border-color: red green blue yellow;
+		} 
+		</style>
+		
+		<style>
+		#id1 {
+			border-top-style: dotted;
+			border-right-style: solid;
+			border-bottom-style: dotted;
+			border-left-style: solid;
+		}
+		</style>
+		<style>
+		#id2 {
+			border: 5px solid red;
+		}
+		</style>
+		
+		<style>
+		#id3 {
+			border-left: 6px solid red;
+			background-color: lightgrey;
+		}
+		</style>
+		
+		<style>
+		p.normal {
+			border: 2px solid red;
+		}
+
+		p.round1 {
+			border: 2px solid red;
+			border-radius: 5px;
+		}
+
+		p.round2 {
+			border: 2px solid red;
+			border-radius: 8px;
+		}
+
+		p.round3 {
+			border: 2px solid red;
+			border-radius: 12px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<pre>
+The border-style property specifies what kind of border to display.
+
+The following values are allowed:
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+		</pre>
+		<p>This property specifies what kind of border to display:</p>
+
+		<p class="dotted">A dotted border.</p>
+		<p class="dashed">A dashed border.</p>
+		<p class="solid">A solid border.</p>
+		<p class="double">A double border.</p>
+		<p class="groove">A groove border.</p>
+		<p class="ridge">A ridge border.</p>
+		<p class="inset">An inset border.</p>
+		<p class="outset">An outset border.</p>
+		<p class="none">No border.</p>
+		<p class="hidden">A hidden border.</p>
+		<p class="mix">A mixed border.</p>
+		
+		
+		<pre>
+The border-width property specifies the width of the four borders.
+
+The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.
+
+The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).
+		</pre>
+		
+		<h2>The border-width Property</h2>
+		<p>This property specifies the width of the four borders:</p>
+
+		<p class="one">Some text.</p>
+		<p class="two">Some text.</p>
+		<p class="three">Some text.</p>
+		<p class="four">Some text.</p>
+		<p class="five">Some text.</p>
+		<p class="six">Some text.</p>
+		<p class="seven">Some text.</p>
+
+		<p><b>Note:</b> The "border-width" property does not work if it is used alone. 
+		Always specify the "border-style" property to set the borders first.</p>
+		
+		<h2>The border-color Property</h2>
+		<p>This property specifies the color of the four borders:</p>
+
+		<p class="one">A solid red border</p>
+		<p class="two">A solid green border</p>
+		<p class="three">A solid multicolor border</p>
+	<pre>
+p {
+    border-style: dotted solid;
+}
+
+is the same as:
+
+{
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+}
+	</pre>
+		
+		<p id="id1">2 different border styles.</p>
+
+		<pre>
+If the border-style property has four values:
+
+border-style: dotted solid double dashed;
+top border is dotted
+right border is solid
+bottom border is double
+left border is dashed
+If the border-style property has three values:
+
+border-style: dotted solid double;
+top border is dotted
+right and left borders are solid
+bottom border is double
+If the border-style property has two values:
+
+border-style: dotted solid;
+top and bottom borders are dotted
+right and left borders are solid
+If the border-style property has one value:
+
+border-style: dotted;
+all four borders are dotted		
+		</pre>
+		
+		<h2>The border Property</h2>
+
+		<p id="id1" >This property is a shorthand property for border-width, border-style, and border-color.</p>
+		
+		<h2>The border-bottom Property</h2>
+		<p id="id3">This property is a shorthand property for border-bottom-width, border-bottom-style, and border-bottom-color.</p>
+
+		<h2>The border-radius Property</h2>
+		<p>This property is used to add rounded borders to an element:</p>
+
+		<p class="normal">Normal border</p>
+		<p class="round1">Round border</p>
+		<p class="round2">Rounder border</p>
+		<p class="round3">Roundest border</p>
+		
+		<pre>
+		p {
+    border-style: solid;
+    border-left-width: 15px;
+}
+
+    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+    border-right-color: #ff0000;
+
+		</pre>
+	</body>
+
+</html>

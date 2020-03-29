@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 Semantic Elements</title>
+
+	</head>
+
+	<body>
+		<p> What are Semantic Elements?<br/>
+		A semantic element clearly describes its meaning to both the browser and the developer.<br/>
+
+		Examples of non-semantic elements: ---div--- and ---span--- - Tells nothing about its content.<br/>
+
+		Examples of semantic elements: ---form---, ---table---, and ---article--- - Clearly defines its content.</p>
+		
+		
+		<h3>New Semantic Elements in HTML5</h3>
+		<p>Many web sites contain HTML code like: ---div id="nav"--- ---div class="header"--- ---div id="footer"---<br/>
+		to indicate navigation, header, and footer.<br/><br/>
+
+		HTML5 offers new semantic elements to define different parts of a web page:  <br/><br/>
+		-article<br/>
+		-aside<br/>
+		-details<br/>
+		-figcaption<br/>
+		-figure<br/>
+		-footer<br/>
+		-header<br/>
+		-main<br/>
+		-mark<br/>
+		-nav<br/>
+		-section<br/>
+		-summary<br/>
+		-time<br/>
+		</p>
+		
+<!-- 		HTML5 <section> Element -->
+		
+		<h3>HTML5 ---section--- Element</h3>
+		<p>The ---section--- element defines a section in a document.<br/>
+
+		According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a heading."<br/>
+
+		A home page could normally be split into sections for introduction, content, and contact information.</p>
+		
+		
+		<section>
+		  <h1>WWF</h1>
+		  <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment,
+			  formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+		</section>
+
+		<section>
+		  <h1>WWF's Panda symbol</h1>
+		  <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi
+			  Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+		</section>
+		
+<!-- article    -->
+		<h3>HTML5 ---article--- Element</h3>
+		The ---article--- element specifies independent, self-contained content.<br/>
+
+		An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.<br/>
+
+		Examples of where an ---article--- element can be used:<br/>
+
+		Forum post<br/>
+		Blog post<br/>
+		Newspaper article<br/>
+		
+		<article>
+		  <h1>What Does WWF Do?</h1>
+		  <p>WWF's mission is to stop the degradation of our planet's natural environment, and build a future in which humans live in harmony with nature.</p>
+		</article>
+
+				
+<!--        Nesting <article> in <section> or Vice Versa?
+The <article> element specifies independent, self-contained content.
+
+The <section> element defines section in a document.
+
+Can we use the definitions to decide how to nest those elements? No, we cannot!
+
+So, on the Internet, you will find HTML pages with <section> elements containing <article> elements, and <article> elements containing <sections> elements.
+
+You will also find pages with <section> elements containing <section> elements, and <article> elements containing <article> elements.                 -->		
+
+<!--             HTML5 <header> Element
+The <header> element specifies a header for a document or section.
+
+The <header> element should be used as a container for introductory content.
+
+You can have several <header> elements in one document.
+
+The following example defines a header for an article:                -->
+
+	<article>
+	  <header>
+		<h1>What Does WWF Do?</h1>
+		<p>WWF's mission:</p>
+	  </header>
+	  <p>WWF's mission is to stop the degradation of our planet's natural environment, and build a future in which humans live in harmony with nature.</p>
+	</article>
+		
+<!-- HTML5 <footer> Element
+The <footer> element specifies a footer for a document or section.
+
+A <footer> element should contain information about its containing element.
+
+A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.
+
+You may have several <footer> elements in one document.-->
+
+<footer>
+  <p>Posted by: Hege Refsnes</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a></p>
+</footer>
+
+<!--  HTML5 <nav> Element
+The <nav> element defines a set of navigation links.
+
+Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.-->
+
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+
+<!-- HTML5 <aside> Element
+The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+
+The aside content should be related to the surrounding content.-->
+
+<p>My family and I visited The Epcot center this summer.</p>
+
+<aside>
+  <h4>Epcot Center</h4>
+  <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+</aside>
+
+<!-- HTML5 <figure> and <figcaption> Elements
+The purpose of a figure caption is to add a visual explanation to an image.
+
+In HTML5, an image and a caption can be grouped together in a <figure> element:
+
+The <img> element defines the image, the <figcaption> element defines the caption.
+-->
+
+<p>The Pulpit Rock is a massive cliff 604 metres (1982 feet) above Lysefjorden, opposite the Kjerag plateau, in Forsand,
+	Ryfylke, Norway. The top of the cliff is approximately 25 by 25 metres (82 by 82 feet) square and almost flat, and is a famous tourist attraction in Norway.</p>
+
+<figure>
+  <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+  <figcaption>Fig.1 - The Pulpit Rock, Norway.</figcaption>
+</figure>
+
+<!-- Why Semantic Elements?
+With HTML4, developers used their own id/class names to style elements: header, top, bottom, footer, menu, navigation, main, container, content, article, sidebar, topnav, etc.
+
+This made it impossible for search engines to identify the correct web page content.
+
+With the new HTML5 elements (<header> <footer> <nav> <section> <article>), this will become easier.
+
+According to the W3C, a Semantic Web: "Allows data to be shared and reused across applications, enterprises, and communities."
+-->
+
+<p>Semantic Elements in HTML5<br/>
+Below is an alphabetical list of the new semantic elements in HTML5.</p>
+
+<!-- 	Tag						Description
+
+		<article>				Defines an article
+		<aside>					Defines content aside from the page content
+		<details>				Defines additional details that the user can view or hide
+		<figcaption>			Defines a caption for a <figure> element
+		<figure>				Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+		<footer>				Defines a footer for a document or section
+		<header>				Specifies a header for a document or section
+		<main>					Specifies the main content of a document
+		<mark>					Defines marked/highlighted text
+		<nav>					Defines navigation links
+		<section>				Defines a section in a document
+		<summary>				Defines a visible heading for a <details> element
+		<time>					Defines a date/time
+-->
+
+	</body>
+
+</html>

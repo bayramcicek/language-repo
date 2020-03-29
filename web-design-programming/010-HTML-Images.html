@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="tr-TR">
+		<head>
+				<meta charset="utf-8">
+				<title>HTML Images</title>
+		
+		</head>
+		
+		<body>
+				<h3> Piramit </h3>
+				<img src="piramit.jpg" alt="piramit" style="width:500px;height:300px; "> <!-- Her zaman style kullan -->
+				
+						<!-- Başka web sitesindeki img leri de kullanabilirsin
+						<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">    -->
+		
+				<a href="https://www.youtube.com/">
+					<img src="programming.gif" alt="Computer man" style="float:right;width:100px;height:100px;border:0;"> <!-- border:0 mutlaka koy-->
+				</a>
+				
+				
+				
+				<p><strong>Float the image to the right: </strong></p>
+				
+				<p>
+					<img src="smiley.gif" alt="smiley view" style="float:right;height:50px;width:50px;border:0;  ">
+					A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+				</p>
+				
+				<!--   üst-sol , alt-sağ
+					   x1 ,y1  , x2 , y2	   		Shape özelliği rect (dikdörtgen) olarak tanımlıysa üst-sol ve alt-sağ köşe 
+													koordinatlarını belirtir.
+						
+						x,y,yarıçap					Shape özelliği circle (daire) olarak tanımlıysa dairenin 
+													merkez koordinatını ve yarıçapını belirtir.
+							
+						x1,y1,x2,y2,..,xn,xy		Shape özelliği poly (poligon) olarak tanımlıysa
+													her köşe için sıralı olarak koordinatlar tanımlanmalıdır. 
+													Poligon'un ilk köşe koordinatları ile son köşe koordinatları 
+													aynı olmamalıdır. Tarayıcı poligonu otomatik olarak tamamlar.
+				-->
+		
+				
+				
+				<p>Click on the sun or one of the planets to watch it closer</p>
+				
+					<img src="planets.gif" alt="planet view" usemap="#pmap" style="width:150px;height:150px;">
+						
+						<map name="pmap">
+							<area shape="rect" coords="87,150,0,0" alt="Sun" href="sun.gif"	>
+							<area shape="circle" coords="129,69,8" alt="venglobe" href="venglobe.gif">
+						</map>			
+		</body>
+
+</html>

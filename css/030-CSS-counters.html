@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ders</title>
+		
+		<style>
+		body {
+			counter-reset: section;
+		}
+
+		h2::before {
+			counter-increment: section;
+			content: "Section " counter(section) ": " ;  	
+		}
+		</style>
+		
+	
+		
+	</head>
+
+	<body>
+		
+		<pre>
+To work with CSS counters we will use the following properties:
+
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset.
+		</pre>
+		
+		<h1>Using CSS Counters:</h1>
+		<h2>HTML Tutorial</h2>
+		<h2>CSS Tutorial</h2>
+		<h2>JavaScript Tutorial</h2>
+
+		<p><b>Note:</b> IE8 supports these properties only if a !DOCTYPE is specified.</p>
+		
+		
+		
+	
+	</body>
+
+</html>

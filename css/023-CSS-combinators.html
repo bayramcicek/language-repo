@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+	</head>
+	
+	<style>
+	.diva p {
+		background-color: yellow;
+	}
+	</style>
+	
+	<style>
+	.divb > p {
+		background-color: yellow;
+	}
+	</style>
+	
+	<style>
+	.divc + p {
+		background-color: yellow;
+	}
+	</style>
+	
+	<style>
+	.divd ~ p {
+		background-color: yellow;
+	}
+	</style>
+
+	<body>
+		
+		<pre>
+There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+		</pre>
+		<div class="diva">
+		  <p>descendant selector (space).</p>
+		  <p>Paragraph 2 in the div.</p>
+		  <span><p>Paragraph 3 in the div.</p></span>
+		</div>
+
+		<p>Paragraph 4. Not in a div.</p>
+		<p>Paragraph 5. Not in a div.</p>
+
+		<h2>Child selector</h2>
+		
+		<div class="divb">
+	  <p>Paragraph 1 in the div.</p>
+	  <p>Paragraph 2 in the div.</p>
+	  <span><p>Paragraph 3 in the div.</p></span> <!-- not Child but Descendant -->
+	</div>
+
+	<p>Paragraph 4. Not in a div.</p>
+	<p>Paragraph 5. Not in a div.</p>
+		
+	<h2>Adjacent sibling selector</h2>
+		
+	<div class="divc">
+	  <p>Paragraph 1 in the div.</p>
+	  <p>Paragraph 2 in the div.</p>
+	</div>
+
+	<p>Paragraph 3. Not in a div.</p>
+	<p>Paragraph 4. Not in a div.</p>
+
+
+	<h2>General Sibling Selector</h2>
+		<p>Paragraph 1.</p>
+
+	<div class="divd">
+	  <code>Some code.</code>
+	  <p>Paragraph 2.</p>
+	</div>
+
+	<p>Paragraph 3.</p>
+	<code>Some code.</code>
+	<p>Paragraph 4.</p>
+		
+
+
+		
+	</body>
+
+</html>

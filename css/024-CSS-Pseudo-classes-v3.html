@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+
+		
+		<style>
+		.p02:first-child i {
+			color: blue;
+		} 
+		</style>
+		
+		<style>
+		q:lang(no) {
+			quotes: "~" "~";
+		}
+		</style>
+		
+		<style>
+		input:focus {
+			background-color: #00FF00;
+		}
+		</style>
+		
+		
+	</head>
+
+	<body>
+	
+		<p class="p02">I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+		<p class="p02">I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+		<p class="p02">I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+		<p class="p02">I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+		<h2> :lang</h2>
+		
+		<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+		<p>In this example, :lang defines the quotation marks for q elements with lang="no":</p>
+		<p><b>Note:</b> IE8 supports the :lang pseudo class only if a !DOCTYPE is specified.</p>
+
+		<form action="/action_page.php" method="get">
+		  First name: <input type="text" name="fname"><br>
+		  Last name: <input type="text" name="lname"><br>
+		  <input type="submit" value="Submit">
+		</form>
+
+		<p><b>Note:</b> IE8 supports the :focus pseudo-class only if a !DOCTYPE is specified.</p>
+		
+		
+		
+	</body>
+
+</html>

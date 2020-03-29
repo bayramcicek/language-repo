@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+		
+		<style>
+		ul.a {
+			list-style-type: circle;
+		}
+
+		ul.b {
+			list-style-type: square;
+		}
+
+		ol.c {
+			list-style-type: upper-roman;
+		}
+
+		ol.d {
+			list-style-type: lower-alpha;
+		}
+		</style>
+		
+		<style>
+		ul.e {
+			list-style-image: url('sqpurple.gif');
+		}
+		</style>
+		
+		<style>
+		ul.f {
+			list-style-position: outside;
+		}
+
+		ul.g {
+			list-style-position: inside;
+		}
+		</style>
+		
+		<style>
+		ul.we {
+			border-left: 5px solid red;
+			background-color: #f1f1f1;
+			list-style-type: none;
+			padding: 10px 20px;
+		}
+		</style>
+		
+	</head>
+
+	<body>
+		
+		<p>Example of unordered lists:</p>
+		<ul class="a">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Coca Cola</li>
+		</ul>
+		
+		<ul class="e">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Coca Cola</li>
+		</ul>
+		
+		<h1>The list-style-position Property</h1>
+
+		<h2>list-style-position: outside (default):</h2>
+		<ul class="f">
+		  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds oA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsf berries from the Coffea plant</li>
+		  <li>Tea - An aromatic beverage commonly prepared by pouringA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seeds hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+		</ul>
+		
+		<h2>list-style-position: inside:</h2>
+		<ul class="g">
+		  <li>Coffee - A brewed drink prepared from roasted coffee beans, which aA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsre the seeds of berries from the Coffea plant</li>
+		  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native toA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seedsA brewed drink prepared from roasted coffee beans, which are the seeds Asia</li>
+		</ul>
+		
+		<h2>shortland</h2>
+		<pre>
+			list-style: square inside url("sqpurple.gif");
+			type - position - image
+		</pre>
+		
+		<p>Remove bullets, margin and padding:</p>
+		<pre>
+		ul.demo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+		</pre>
+		
+		<p>List with a red left border:</p>
+		<ul class="we">
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Coca Cola</li>
+		</ul>
+		
+	</body>
+
+</html>

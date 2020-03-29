@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="tr-TR">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Lists</title>
+		
+	</head>
+	
+	<body>
+	<!--   -----     ----    -----         UNordered List        --------              --------             -------          -->
+			<h2> Unordered List </h2>
+
+		<ul>  <!--        <ul style="list-style-type:disc">  third properties comes default         -->
+			<li>first</li>  <!-- List -->
+			<li>second</li>
+			<li>thirth</li>
+		</ul>
+		
+		<!--	The CSS     /* list-style-type */     property is used to define the style of the list item marker:
+		
+				Value	|	Description
+		----------------|------------------------------------------------------
+				disc	|	Sets the list item marker to a bullet (default)
+				circle	|	Sets the list item marker to a circle
+				square	|	Sets the list item marker to a square
+				none	|	The list items will not be marked
+		-->             
+		
+		<ul style="list-style-type:circle"> <!-- circle --> 
+			<li>first</li>  <!-- List -->
+			<li>second</li>
+			<li>circle</li>
+		</ul>
+		
+		
+		<ul style="list-style-type:square"> <!-- square -->
+			<li>first</li>  
+			<li>square</li>
+			<li>thirth</li>
+		</ul>
+		
+		<ul style="list-style-type:none">
+			<li>abc</li>
+			</ul>
+		
+		<ul style="list-style-type:none"> <!-- none -->
+			<li>first</li>  
+			<li>none</li>
+			<li>thirth</li>
+		</ul>
+		
+		
+		<!--        -----        ------       -----     ------    Ordered List   ------       --------       ---------        -->
+		
+		<h2> Ordered List </h2>
+		
+		<ol>
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		<!--	Ordered HTML List - The Type Attribute
+		
+				The type attribute of the <ol> tag, defines the type of the list item marker:
+
+				Type		|	Description
+		--------------------|------------------------------------------------------------------------		
+				type="1"	|	The list items will be numbered with numbers (default)
+				type="A"	|	The list items will be numbered with uppercase letters
+				type="a"	|	The list items will be numbered with lowercase letters
+				type="I"	|	The list items will be numbered with uppercase roman numbers
+				type="i"	|	The list items will be numbered with lowercase roman numbers
+							|
+		-->
+		
+		<ol type="1">
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		<ol type="A">
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		<ol type="a">
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		<ol type="I">
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		<ol type="i">
+			<li>Mobile</li>
+			<li>Applications</li>
+			<li>Students</li>
+		</ol>
+		
+		
+		<h2>HTML Description Lists</h2>
+		
+		<!-- The <dl> tag defines the /* Description List */ 
+		
+		         <dt> tag defines the /* Description Term (name) */ 
+		         <dd> tag describes each term(description describes)
+		-->
+		
+		<dl>
+			<dt>List</dt>
+				<dd>- it is a list</dd>
+			<dt>List</dt>
+				<dd>- it isn'n a list</dd>
+		</dl>
+				
+		
+		<h2>Nested HTML Lists  (lists inside lists)  </h2>
+		<h3>Note: List items can contain new list, and other HTML elements, like images and links, etc.</h3>
+		
+		<ol>
+			<li>Applications
+			
+			
+			
+			</li>
+			
+			<li>Students
+			
+				<ol type="I">
+					<li>Applications</li>
+					<li>Students</li>
+				</ol>
+			</li>	
+			
+			<li>Applications</li>
+			
+		</ol>
+		
+		<h2>Horizontal Lists</h2>
+
+	</body>
+
+</html>

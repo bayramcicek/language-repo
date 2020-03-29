@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset = "utf-8">
+		<title>HTML Entities</title>
+
+	</head>
+
+	<body>
+		<p>Some characters are reserved in HTML.<br>
+			
+		If you use the less than or greater than  signs in your text, the browser might mix them with tags.<br>
+
+		Character entities are used to display reserved characters in HTML.<br>
+
+		A character entity looks like this:</p>
+
+			<!--&entity_name;
+			OR
+
+			&#entity_number;
+			
+		To display a less than sign (<) we must write: &lt; or &#60;-->
+
+		<p>Advantage of using an entity name: An entity name is easy to remember.<br>
+		Disadvantage of using an entity name: Browsers may not support all entity names, but the support for numbers is good.</p>
+		
+		<p> küçük işareti  &#60 </p>
+		<p> tire işareti  &#8209 </p>
+		<p> Non Breaking SPace nbsp  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lşjhl</p>
+		
+		
+		<!--   non-breaking space:   &nbsp;    -->
+		<p> non-breaking space: aasdasdasd  &#8209;&#8209;&#8209;&#8209;&#8209;&#8209;   asdasdasd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asdasdasd
+		gfjgfjh        </p>
+<!--
+		Result	    Description	           					Entity Name	              	Entity Number
+----------------------------------------------------------------------------------------------------------------------------------		
+					non-breaking space	                 	&nbsp;						&#160;
+		
+		<			less than	                  			&lt;						&#60;
+		
+		>			greater than				  			&gt;						&#62;
+		
+		&			ampersand	                  			&amp;						&#38;
+		
+		"			double quotation mark	      			&quot;						&#34;
+		
+		'			single quotation mark (apostrophe)		&apos;						&#39;
+		
+		¢			cent									&cent;						&#162;
+		
+		£			pound									&pound;						&#163;
+		
+		¥			yen										&yen;						&#165;
+		
+		€			euro									&euro;						&#8364;
+		
+		©			copyright								&copy;						&#169;
+		
+		®			registered trademark					&reg;						&#174;
+		
+-->	
+<!--
+		Mark	Character	Construct	Result
+		----------------------------------------------
+		 ̀		a			a&#768;		à
+		 
+		 ́		a			a&#769;		á
+		 
+		̂		a			a&#770;		â
+		
+		 ̃		a			a&#771;		ã
+		 
+		 ̀		O			O&#768;		Ò
+		 
+		 ́		O			O&#769;		Ó
+		 
+		̂		O			O&#770;		Ô
+		
+		 ̃		O			O&#771;		Õ
+-->
+
+		<p>I will display &euro;</p>
+		<p>I will display &#8364;</p>
+		<p>I will display &#x20AC;</p>
+		<p>I will display &#8378;</p>
+		
+		<p><a href="https://www.w3schools.com/charsets/default.asp" target="_blank" > link </a></p>
+
+	</body>
+
+</html>

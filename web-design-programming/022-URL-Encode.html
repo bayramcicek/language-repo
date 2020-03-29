@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset = "utf-8">
+		<title>URL Encode</title>
+
+	</head>
+
+	<body>
+		<p>A web address, like https://www.w3schools.com/html/default.asp follows these syntax rules:<br>
+
+			scheme://prefix.domain:port/path/filename</p>
+			
+		
+			<p>Explanation:<br>
+
+				scheme - defines the type of Internet service (most common is http or https)<br>
+				prefix - defines a domain prefix (default for http is www)<br>
+				domain - defines the Internet domain name (like w3schools.com)<br>
+				port - defines the port number at the host (default for http is 80)<br>
+				path - defines a path at the server (If omitted: the root directory of the site)<br>
+				filename - defines the name of a document or resource<br></p>
+				
+		<p>	&nbsp &nbsp	Scheme 	&nbsp &nbsp &nbsp &nbsp &nbsp  	 	Short for &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspUsed for<br><br>
+				
+			&nbsp &nbsp	http	&nbsp &nbsp &nbsp &nbsp &nbsp	&nbsp &nbsp &nbsp 	HyperText Transfer Protocol &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspCommon web pages. Not encrypted<br><br>
+				
+			&nbsp &nbsp	https	&nbsp &nbsp &nbsp &nbsp &nbsp 	&nbsp	&nbsp Secure HyperText Transfer Protocol	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp		Secure web pages. Encrypted<br><br>
+				
+			&nbsp &nbsp	ftp		&nbsp &nbsp &nbsp &nbsp &nbsp 	&nbsp &nbsp &nbsp &nbsp	File Transfer Protocol	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	&nbsp &nbsp &nbsp &nbsp &nbsp	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp			Downloading or uploading files<br><br>
+				
+			&nbsp &nbsp	file	 &nbsp &nbsp &nbsp &nbsp &nbsp 	&nbsp	&nbsp &nbsp A file on your computer                    </p>
+			
+			<p> URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.<br>
+
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.</p>
+
+			<!-- Character			From Windows-1252				From UTF-8
+			
+			
+					€				%80								%E2%82%AC
+					
+					£				%A3								%C2%A3
+					
+					©				%A9								%C2%A9
+					
+					®				%AE								%C2%AE
+					
+					À				%C0								%C3%80
+					
+					Á				%C1								%C3%81
+					
+					Â				%C2								%C3%82
+					
+					Ã				%C3								%C3%83
+					
+					Ä				%C4								%C3%84
+					
+					Å				%C5								%C3%85     -->
+
+	</body>
+
+</html>

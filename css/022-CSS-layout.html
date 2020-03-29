@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Css</title>
+		
+		<style>
+		.center {
+			margin: auto; /* centered div*/
+			width: 80%;
+			border: 3px solid #73AD21;
+			padding: 10px;
+			text-align: center; /*centered text */
+		}
+		</style>
+		
+		<style>
+		img {
+			display: block;
+			margin-left: auto; /*33.33%*/
+			margin-right: auto;
+		}
+		</style>
+	</head>
+
+	<body>
+		
+		<h2>Center Align Elements</h2>
+		<p>To horizontally center a block element (like div), use margin: auto;</p>
+
+		<div class="center">
+		  <p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+		</div>
+		
+		<h2> To center an image, set left and right margin to auto and make it into a block element:
+		</h2>
+		
+				<h2>Center an Image</h2>
+		<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+		<img src="paris.jpg" alt="Paris" style="width:40%">
+		
+		<pre> float: right;
+		
+		.clearfix { /* if an image outside the border, use this to correcting it */
+			overflow: auto;
+		}
+		</pre>
+		
+		<pre>
+
+.center {
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid green;
+    text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center p {
+    line-height:1.0;
+    display: inline-block;
+    vertical-align: center;
+}
+
+I am vertically centered.
+
+		</pre>
+
+	</body>
+
+</html>

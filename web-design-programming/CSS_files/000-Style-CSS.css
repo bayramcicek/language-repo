@@ -1,0 +1,31 @@
+h1 {
+	color:black;
+	font-family:arial black;
+	font-size:400%;
+	
+	}
+h6 { 
+	color:red;
+	font-family:courier;
+	font-size:200%;
+	border:10px solid yellow;
+	padding:20px; /* çerçeve ve text arası boşluk*/
+	margin:200px;  /* dışarısı ve çerçeve */
+	}
+	
+#p01 {
+	color:red; /*id="adfasd"*/
+	font-family:arial black;
+	font-size:70px;  /*  px * 6,2 = % */
+	
+}
+#p02 {
+	color:black;
+	font-family:arial black;
+	font-size:434%;
+}
+
+p.first { /*class="sdssd"*/
+	background-color:red;
+	color:yellow;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Ders</title>
+		
+		<style>
+		h3 {
+			border: 5px solid black;
+			padding: 5px;
+			margin-top: 50px;
+			margin-bottom: 1px;
+			margin-right: 150px;
+			margin-left: 80px;
+			background-color: lightblue;
+		}
+			
+		p {
+			border: 1px solid black;
+			margin: 25px 50px 75px 100px; /* margin: 25px 50px 100px; */  /* margin: auto; */  /* margin: 25px 100px; */
+			background-color: lightblue;
+		}
+			
+		div {
+			border: 3px solid red;
+			margin-left: 100px;
+		}
+
+		h1.ex1 {
+			margin-left: inherit;
+		}
+		</style>
+		
+		<style>
+		#a {
+			margin: 0 0 50px 0;
+		}
+
+		#b {
+			margin: 30px 0 0 0; /* due to margin collapse */
+		}
+		</style>
+		
+		
+		
+	</head>
+
+	<body>
+		
+		<h2>Using individual margin properties</h2>
+
+		<h3>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</h3>
+
+		<p>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</p>
+		<div>
+			<h1>example inherit</h1>
+		</div>
+		
+		<p id="asd">In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. Then, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px.</p>
+
+<h1 id="a">Heading 1</h1>
+<h2 id="b">Heading 2</h2>
+	
+	</body>
+
+</html>

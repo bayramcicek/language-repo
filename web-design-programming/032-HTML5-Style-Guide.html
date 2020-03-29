@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 Style Guide and Coding Conventions</title>
+
+	</head>
+
+	<body>
+	
+	<h1>HTML Coding Conventions</h1>
+	
+		<h5>HTML Coding Conventions</h5>
+		<p>Web developers are often uncertain about the coding style and syntax to use in HTML.<br/>
+		Between 2000 and 2010, many web developers converted from HTML to XHTML.<br/>
+		With XHTML, developers were forced to write valid and "well-formed" code.<br>
+		HTML5 is a bit more sloppy when it comes to code validation.</p>
+		
+	<h1>Be Smart and Future Proof</h1>
+		<p>A consistent use of style, makes it easier for others to understand your HTML.<br/>
+		In the future, programs like XML readers, may want to read your HTML.<br/>
+		Using a well-formed-"close to XHTML" syntax, can be smart.<br/>
+		<b>Always keep your code tidy, clean, and well-formed.</b></p>
+	
+	<h1>Use Correct Document Type</h1>
+		<p>Always declare the document type as the first line in your document:<br/>
+
+		&lt!DOCTYPE html&gt
+		If you want consistency with lower case tags, you can use:
+
+		&lt!doctype html&gt
+		
+	<h1>Use Lower Case Element Names</h1>
+	
+		<p>HTML5 allows mixing uppercase and lowercase letters in element names.<br/>
+
+			We recommend using lowercase element names because:<br/>
+
+			Mixing uppercase and lowercase names is bad<br/>
+			Developers normally use lowercase names (as in XHTML)<br/>
+			Lowercase look cleaner<br/>
+			Lowercase are easier to write<br/><br/></p>
+
+			<p>Bad:<br/></p>
+<SECTION> 
+  <p>This is a paragraph.</p>
+</SECTION><br/>
+<p>Very Bad:<br/></p>
+<Section> 
+  <p>This is a paragraph.</p>
+</SECTION>
+<p>Good:<br/></p>
+<section> 
+  <p>This is a paragraph.</p>
+</section><br/>
+
+	<h1>Close All HTML Elements</h1>
+	<p>In HTML5, you don't have to close all elements (for example the &ltp&gt element).<br/>
+
+	We recommend closing all HTML elements.<br/><br/></p>
+
+	<p><b>Bad:</b></p>
+	<section>
+	  <p>This is a paragraph.
+	  <p>This is a paragraph.
+	</section><br/>
+	
+	<p><b>Good:</b></p>
+	<section>
+	  <p>This is a paragraph.</p>
+	  <p>This is a paragraph.</p>
+	</section>
+	
+	<h1>Close Empty HTML Elements</h1>
+	<p>In HTML5, it is optional to close empty elements.<br/></p>
+
+	<p><b>Allowed:</b></p>
+	&ltmeta charset="utf-8"&gt <br>
+	<p><b>Also Allowed:</b></p>
+	&ltmeta charset="utf-8" /&gt <br/><br/>
+	
+	
+	<p>However, the closing slash (/) is REQUIRED in XHTML and XML.<br/>
+
+If you expect XML software to access your page, it is a good idea to keep the closing slash!<br/><br/></p>
+
+	<h1>Use Lower Case Attribute Names</h1>
+			<p>HTML5 allows mixing uppercase and lowercase letters in attribute names.<br/>
+
+			We recommend using lowercase attribute names because:<br/>
+
+			Mixing uppercase and lowercase names is bad<br/>
+			Developers normally use lowercase names (as in XHTML)<br/>
+			Lowercase look cleaner<br/>
+			Lowercase are easier to write<br/><br/></p>
+			<p><b>Bad:</b></p>
+			&ltdiv CLASS="menu"&gt
+			<p><b>Good:</b></p>
+			&ltdiv class="menu"&gt <br/><br/><br>
+			
+			
+			<h1>Quote Attribute Values</h1>
+			<p>HTML5 allows attribute values without quotes.<br/>
+
+			We recommend quoting attribute values because:<br/>
+
+			Mixing uppercase and lowercase values is bad<br/>
+			Quoted values are easier to read<br/>
+			You MUST use quotes if the value contains spaces<br/><br/></p>
+			
+			
+			<p><b>Very bad:</b></p><br/>
+			<p>This will not work, because the value contains spaces:</p><br/>
+
+			&lttable class=table striped&gt <br/>
+			<p>Bad:</p>
+			&lttable class=striped&gt
+			<p>Good:</p>
+			&lttable class="striped"&gt
+			
+			<h1>Image Attributes</h1>
+			<p>Always add the "alt" attribute to images. This attribute is important when the image for some reason<br/>
+			cannot be displayed. Also, always define image width and height. It reduces flickering because the <br/>
+			browser can reserve space for the image before loading.<br/></p>
+
+			<p>Bad:</p>
+			&ltimg src="html5.gif"&gt
+			<p>Good:</p>
+			&ltimg src="html5.gif" alt="HTML5" style="width:128px;height:128px"&gt
+			
+			<h1>Spaces and Equal Signs</h1>
+	<p>HTML5 allows spaces around equal signs. But space-less is easier to read, and groups entities better together.</p><br/>
+
+	<p>Bad:</p>
+	&ltlink rel = "stylesheet" href = "styles.css"&gt <br/>
+	<p>Good:</p>
+	&ltlink rel="stylesheet" href="styles.css"&gt <br/><br/>
+	
+	<h1>Avoid Long Code Lines</h1>
+<p>When using an HTML editor, it is inconvenient to scroll right and left to read the HTML code.<br/>
+
+Try to avoid code lines longer than 80 characters.</p><br/><br/><br/>
+
+
+	<h1>Blank Lines and Indentation</h1>
+	<p>Do not add blank lines without a reason.<br/>
+
+	For readability, add blank lines to separate large or logical code blocks.<br/>
+
+	For readability, add two spaces of indentation. Do not use the tab key.<br/>
+
+	Do not use unnecessary blank lines and indentation. It is not necessary to indent every element:</p><br/>
+
+	<p>Unnecessary:</p>
+<pre>
+	  &lth4>Famous Cities&lt/h4&gt
+
+	  &lth5>Tokyo&lt/h5&gt
+
+	  &ltp>
+		Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+		and the most populous metropolitan area in the world.
+		It is the seat of the Japanese government and the Imperial Palace,
+		and the home of the Japanese Imperial Family.
+	  &lt/p> </pre><br/><br/>
+
+	
+	<p>Better:</p><br/>
+
+<pre>
+	&lth4>Famous Cities&lt/h4&gt
+
+	&lth5>Tokyo&lt/h5&gt
+	&ltp&gtTokyo is the capital of Japan, the center of the Greater Tokyo Area,
+	and the most populous metropolitan area in the world.
+	It is the seat of the Japanese government and the Imperial Palace,
+	and the home of the Japanese Imperial Family.&lt/p&gt
+</pre><br/><br/>
+	
+	<p>Table Example:</p><br/>
+	<pre>
+	&lttable>
+	  &lttr>
+		&ltth>Name&lt/th&gt
+		&ltth>Description&lt/th&gt
+	  &lt/tr>
+	  &lttr>
+		&lttd>A&lt/td&gt
+		&lttd>Description of A&lt/td>
+	  &lt/tr>
+	  &lttr>
+		&lttd>B&lt/td&gt
+		&lttd>Description of B&lt/td&gt
+	  &lt/tr>
+	&lt/table><br/><br/>
+	</pre>
+	<pre>
+	<p>List Example:</p><br/>
+	&ltol>
+	  &ltli>London&lt/li&gt
+	  &ltli>Paris&lt/li&gt
+	  &ltli>Tokyo&lt/li&gt
+	&lt/ol&gt
+	</pre><br/><br/>
+	
+	<h1>Omitting -html- and -body-?</h1>
+    In the HTML5 standard, the -html- tag and the -body- tag can be omitted.
+	We do not recommend omitting the -html- and -body- tags.
+
+<!--
+	The <html> element is the document root. It is the recommended place for specifying the page language:
+
+	<!DOCTYPE html>
+	<html lang="en-US">
+	Declaring a language is important for accessibility applications (screen readers) and search engines.
+
+	Omitting <html> or <body> can crash DOM and XML software.
+
+	Omitting <body> can produce errors in older browsers (IE9).
+	
+-->
+
+
+<h1>Omitting -head-?</h1>
+
+<!--
+In the HTML5 standard, the <head> tag can also be omitted.
+
+By default, browsers will add all elements before <body>, to a default <head> element.
+
+You can reduce the complexity of HTML, by omitting the <head> tag:
+
+Example
+<!DOCTYPE html>
+<html>
+<title>Page Title</title>
+
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+
+</html>
+Try it Yourself »
+We do not recommend omitting the <head> tag.
+
+Omitting tags is unfamiliar to web developers. It needs time to be established as a guideline.	
+-->
+
+
+<h1>Meta Data</h1>
+<!--
+	The <title> element is required in HTML5. Make the title as meaningful as possible:
+
+	<title>HTML5 Syntax and Coding Style</title>
+	To ensure proper interpretation, and correct search engine indexing, both the language and the character encoding should 
+	be defined as early as possible in a document:
+
+	<!DOCTYPE html>
+	<html lang="en-US">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>HTML5 Syntax and Coding Style</title>
+	</head>
+-->
+					
+    <h1>Setting The Viewport</h1><!-- MOBİL & DESKTOP görünüm-->
+<!--	
+HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.
+
+The viewport is the user's visible area of a web page. It varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+You should include the following <meta> viewport element in all your web pages:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+Here is an example of a web page without the viewport meta tag, and the same web page with the viewport meta tag:
+
+Tip: If you are browsing this page with a phone or a tablet, you can click on the two links below to see the difference.				
+-->	 
+
+
+<!--
+
+HTML Comments
+Short comments should be written on one line, like this:
+
+<!-- This is a comment -->
+<p>Comments that spans more than one line, should be written like this:</p>
+
+<!-- 
+  This is a long comment example. This is a long comment example.
+  This is a long comment example. This is a long comment example.
+-->
+<p>Long comments are easier to observe if they are indented two spaces.</p>
+
+
+<!-- 
+Style Sheets
+Use simple syntax for linking to style sheets (the type attribute is not necessary):
+
+<link rel="stylesheet" href="styles.css">
+Short rules can be written compressed, on one line, like this:
+
+p.intro {font-family: Verdana; font-size: 16em;}
+Long rules should be written over multiple lines:
+
+body {
+  background-color: lightgrey;
+  font-family: "Arial Black", Helvetica, sans-serif;
+  font-size: 16em;
+  color: black;
+}
+Place the opening bracket on the same line as the selector
+Use one space before the opening bracket
+Use two spaces of indentation
+Use semicolon after each property-value pair, including the last
+Only use quotes around values if the value contains spaces
+Place the closing bracket on a new line, without leading spaces
+Avoid lines over 80 characters
+-->
+
+<!--
+	Loading JavaScript in HTML
+Use simple syntax for loading external scripts (the type attribute is not necessary):
+
+<script src="myscript.js">
+Accessing HTML Elements with JavaScript
+A consequence of using "untidy" HTML styles, might result in JavaScript errors.
+
+These two JavaScript statements will produce different results:
+
+-->	
+<!--
+<p id="Demo">This is paragraph 1.</p>
+<p id="demo">This is paragraph 2.</p>
+
+<script>
+// Only paragraph 2 will be overwritten
+document.getElementById("demo").innerHTML = "HELLO.";		
+-->		
+		
+<!--
+Use Lower Case File Names
+Some web servers (Apache, Unix) are case sensitive about file names: "london.jpg" cannot be accessed as "London.jpg".
+
+Other web servers (Microsoft, IIS) are not case sensitive: "london.jpg" can be accessed as "London.jpg" or "london.jpg".
+
+If you use a mix of upper and lower case, you have to be extremely consistent.
+
+If you move from a case insensitive to a case sensitive server, even small errors will break your web!
+
+To avoid these problems, always use lower case file names.
+
+File Extensions
+HTML files should have a .html or .htm extension.
+
+CSS files should have a .css extension.
+
+JavaScript files should have a .js extension.
+
+Differences Between .htm and .html
+There is no difference between the .htm and .html extensions. Both will be treated as HTML by any web browser or web server.
+
+The differences are cultural:
+
+.htm "smells" of early DOS systems where the system limited the extensions to 3 characters.
+
+.html "smells" of Unix operating systems that did not have this limitation.
+
+Technical Differences
+When a URL does not specify a filename (like https://www.w3schools.com/css/), the server returns a default filename. Common default filenames are index.html, index.htm, default.html, and default.htm.
+
+If your server is configured only with "index.html" as default filename, your file must be named "index.html", not "index.htm."
+
+However, servers can be configured with more than one default filename, and normally you can set up as many default filenames as needed.
+
+Anyway, the full extension for HTML files is .html, and there's no reason it should not be used.
+
+-->		
+
+	</body>
+
+</html>

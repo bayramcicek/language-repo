@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ders</title>
+		
+		<style>
+		.intro {background-color: yellow;}
+		h1 {background-color: red;}		
+</style>
+	</head>
+<a href="https://www.w3schools.com/css/css_specificity.asp">link</a>
+	<body>
+		<pre>
+A: h1
+B: #content h1
+C: &ltdiv id="content"&gt&lth1 style="color: #ffffff"&gtHeading&lt/h1&gt&lt/div&gt
+
+The specificity of A is 1 (one element)
+The specificity of B is 101 (one ID reference and one element)
+The specificity of C is 1000 (inline styling)
+
+Since 1 &lt 101 &lt 1000, the third rule (C) has a greater level of specificity, and therefore will be applied.
+		</pre>
+		
+		<h1 class="intro">This is a heading</h1>
+
+	
+	</body>
+
+</html>
