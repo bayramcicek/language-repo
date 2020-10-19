@@ -19,7 +19,7 @@ set(SOURCE_FILES
         #        ders/test01-static.c
 
 
-#        c_tutorial/c00-intro.c
+        #        c_tutorial/c00-intro.c
         #        c_tutorial/c01-storage.c
         #        c_tutorial/c02-variable.c
         #        c_tutorial/c03-input.c
@@ -71,7 +71,11 @@ set(SOURCE_FILES
         #        c_tutorial/c46-dynamic-arrays.c
 
 
-#        dc_fall_2020/dynamic_array_allocation_one_dimen.c
-        dc_fall_2020/dynamic_array_allocation_two_dimen.c)
+        #        dc_fall_2020/week01/dynamic_array_allocation_one_dimen.c
+        #        dc_fall_2020/week01/dynamic_array_allocation_two_dimen.c
+        #                dc_fall_2020/week02/MatrisCarpimiDinamik.c
+        dc_fall_2020/week02/MatrisCarpimiStatik.c
+
+        )
 
 add_executable(Crepo ${SOURCE_FILES})
