@@ -73,8 +73,8 @@ set(SOURCE_FILES
 
         #        dc_fall_2020/week01/dynamic_array_allocation_one_dimen.c
         #        dc_fall_2020/week01/dynamic_array_allocation_two_dimen.c
-        #                dc_fall_2020/week02/MatrisCarpimiDinamik.c
-        dc_fall_2020/week02/MatrisCarpimiStatik.c
+        dc_fall_2020/week02-03/MatrisCarpimiDinamik.c
+        #        dc_fall_2020/week02-03/MatrisCarpimiStatik.c
 
         )
 

@@ -64,9 +64,8 @@ void dinamik_matris_yaz(int **dizi, int satir, int sutun) {
 void dinamik_matris_carpimi(int **A, int A_satir, int A_sutun,
                             int **B, int B_satir, int B_sutun,
                             int **C, int C_satir, int C_sutun) {
-
-
     int i, j, k;
+
     if (A_sutun != B_satir) {
         printf("Carpim matrislerinin boyutlari uyusmuyor!!!");
         return;
@@ -79,12 +78,11 @@ void dinamik_matris_carpimi(int **A, int A_satir, int A_sutun,
                 C[i][j] = 0;
                 for (k = 0; k < A_sutun; k++)
                     C[i][j] = C[i][j] + A[i][k] * B[k][j];
-
             }
     }
 }
 
-void dizi_kopyala(int *statik_dizi, int statik_dizi_uzunlugu, int **dinamik_dizi, int *dinamik_dizi_uzunlugu) {
+void dizi_kopyala(const int *statik_dizi, int statik_dizi_uzunlugu, int **dinamik_dizi, int *dinamik_dizi_uzunlugu) {
     int i;
     *dinamik_dizi = (int *) malloc(statik_dizi_uzunlugu * sizeof(int));
     if (*dinamik_dizi == NULL) {
@@ -97,6 +95,19 @@ void dizi_kopyala(int *statik_dizi, int statik_dizi_uzunlugu, int **dinamik_dizi
     //(*dinamik_dizi)[i]=statik_dizi[i];
 }
 
+// odev
+void matris_geri_ver(int **matris, int satir_sayisi, int sutun_sayisi) {
+    // satırları free et
+    for (int i = 0; i < satir_sayisi; ++i) {
+        free(*(matris + i));
+        printf("%p -> freed\n", *(matris + i));
+    }
+
+    // matrisi free et
+    free(matris);
+    printf("%p -> freed\n", matris);
+    printf("matris başarıyla free edildi!!\n");
+}
 
 int main(int argc, char **argv) {
 
@@ -108,8 +119,10 @@ int main(int argc, char **argv) {
     int eleman_sayisi;
     srand(time(NULL)); // rastgele (random) sayilar olusturmak icin
     eleman_sayisi = 10;
+
     tek_boyutlu_dizi_olustur(&dizi, eleman_sayisi);
     tek_boyutlu_dizi_yaz(dizi, eleman_sayisi);
+
     dinamik_matris_olustur(&A, 5, 6);
     printf("--- A matrisi ----\n");
     dinamik_matris_yaz(A, 5, 6);
@@ -122,19 +135,27 @@ int main(int argc, char **argv) {
     printf("--- C matrisi ----\n");
     dinamik_matris_yaz(C, 5, 7);
 
+
     dinamik_matris_carpimi(A, 5, 6, B, 6, 7, C, 5, 7);
     printf("---- C=A*B matrisi ----\n");
     dinamik_matris_yaz(C, 5, 7);
     printf("-----------------------\n");
 
 
-    A[2][3] = 129;
-    *(*(A + 3) + 4) = 97;
+    A[2][3] = 129;  // dizi notasyonu
+    *(*(A + 3) + 4) = 97;   // pointer notasyonu
     dinamik_matris_yaz(A, 5, 6);
 
     tek_boyutlu_dizi_yaz(dizi1, 5);
+    // static diziyi dinamik diziye kopyala
     dizi_kopyala(dizi1, 5, &dinamik_dizi, &dinamik_dizi_uzunlugu);
     tek_boyutlu_dizi_yaz(dinamik_dizi, dinamik_dizi_uzunlugu);
+
+    // odev
+    matris_geri_ver(A, 5, 6);
+
+//    // error: 139 (interrupted by signal 11: SIGSEGV)
+//    dinamik_matris_yaz(A, 5, 6);
 
 
     return (EXIT_SUCCESS);
