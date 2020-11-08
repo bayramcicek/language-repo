@@ -70,11 +70,15 @@ set(SOURCE_FILES
         #        c_tutorial/c45-memory-string.c
         #        c_tutorial/c46-dynamic-arrays.c
 
-
         #        dc_fall_2020/week01/dynamic_array_allocation_one_dimen.c
         #        dc_fall_2020/week01/dynamic_array_allocation_two_dimen.c
-        dc_fall_2020/week02-03/MatrisCarpimiDinamik.c
+        #        dc_fall_2020/week02-03/MatrisCarpimiDinamik.c
         #        dc_fall_2020/week02-03/MatrisCarpimiStatik.c
+        dc_fall_2020/week04-05/liste.c
+
+#        dc_fall_2020/week04-05/liste_ders.c
+
+
 
         )
 
