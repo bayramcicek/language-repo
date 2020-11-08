@@ -131,7 +131,7 @@ void liste_sirala(struct hucre **liste_basi) {
     d = (*liste_basi)->sonraki;
     (*liste_basi)->sonraki = NULL;
 
-    // d -> eklenecek yeni diğim var mı.
+    // d -> eklenecek yeni düğim var mı.
     while (d != NULL) {
         c = d;
         d = d->sonraki;
@@ -158,9 +158,9 @@ void liste_ters_cevir(struct hucre **liste_basi) {
     struct hucre *a, *b;
 
     a = NULL;
-    while (*liste_basi != NULL) {
+    while ((*liste_basi) != NULL) {
         b = *liste_basi;
-        *liste_basi = (*liste_basi)->sonraki;
+        (*liste_basi) = (*liste_basi)->sonraki;
         b->sonraki = a;
         a = b;
     }
@@ -181,10 +181,36 @@ int ardisik_mi(struct hucre *liste_basi, int anahtar1, int anahtar2) {
     return 0;
 }
 
+// ödev - iteratif olarak yaz
 void liste_tersten_yaz(struct hucre *liste_basi) {
-    // iteratif olarak yaz
-    
 
+    // liste boşsa çık
+    if (liste_basi == NULL) exit(1);
+
+    struct hucre *temp = liste_basi;
+    int uzunluk = 0;
+
+    // liste uzunluğunu bul
+    while (temp != NULL) {
+        temp = temp->sonraki;
+        uzunluk++;
+    }
+
+    int elemanlar[uzunluk];
+    int i = 0;
+
+    // listeye elemanları ata
+    while (liste_basi != NULL) {
+        elemanlar[i] = liste_basi->icerik;
+        liste_basi = liste_basi->sonraki;
+        i++;
+    }
+
+    // tersten yaz
+    printf("ters liste: \n");
+    for (int j = uzunluk-1; j >= 0 ; --j) {
+        printf("%4d ", elemanlar[j]);
+    }
 }
 
 int main(int argc, char **argv) {
@@ -196,13 +222,14 @@ int main(int argc, char **argv) {
     liste_basina_ekle(200, &liste1);
     liste_basina_ekle(40, &liste1);
     liste_basina_ekle(80, &liste1);
-    liste_yaz(liste1);
+//    liste_yaz(liste1);
 
     liste_sonuna_ekle(400, &liste1);
     liste_yaz(liste1);
 
-    liste_yaz_recursive(liste1);
-    tersten_liste_yaz_recursive(liste1);
+//    liste_yaz_recursive(liste1);
+//    tersten_liste_yaz_recursive(liste1);
+    liste_tersten_yaz(liste1);
 
 //    printf("\n");
 //    printf("%d\n", ardisik_mi(liste1, 30, 20));
@@ -210,4 +237,3 @@ int main(int argc, char **argv) {
 
     return (EXIT_SUCCESS);
 }
-
