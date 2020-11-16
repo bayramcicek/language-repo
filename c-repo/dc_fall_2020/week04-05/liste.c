@@ -78,11 +78,11 @@ void tersten_liste_yaz_recursive(struct hucre *liste_basi) {
 void liste_yok_et(struct hucre **liste_basi) {
     struct hucre *simdiki;
     while (*liste_basi != NULL) {
-        //  simdiki=(*liste_basi);
-        //  *liste_basi=(*liste_basi)->sonraki;
-        //  free(simdiki);
-        free(*liste_basi);
+          simdiki=(*liste_basi);
         *liste_basi = (*liste_basi)->sonraki;
+        free(simdiki);
+//        free(*liste_basi);
+//        *liste_basi = (*liste_basi)->sonraki;
     }
 }
 
@@ -208,7 +208,7 @@ void liste_tersten_yaz(struct hucre *liste_basi) {
 
     // tersten yaz
     printf("ters liste: \n");
-    for (int j = uzunluk-1; j >= 0 ; --j) {
+    for (int j = uzunluk - 1; j >= 0; --j) {
         printf("%4d ", elemanlar[j]);
     }
 }
@@ -231,9 +231,25 @@ int main(int argc, char **argv) {
 //    tersten_liste_yaz_recursive(liste1);
     liste_tersten_yaz(liste1);
 
-//    printf("\n");
+    printf("\n");
 //    printf("%d\n", ardisik_mi(liste1, 30, 20));
 //    liste_yok_et(&liste1);
+    liste_sirala(&liste1);
+    liste_yaz(liste1);
+
+    liste_eleman_sil(80, &liste1);
+    liste_yaz(liste1);
+
+    liste_yok_et(&liste1);
+    printf("----- \n");
+    liste_yaz(liste1);
+    printf("*******\n");
+
+    // 3'ü de aynıdır.
+    if (liste1 == NULL) printf("liste bos!!!\n");
+    if (liste1 == 0) printf("liste bos!!!\n");
+    if (!liste1) printf("liste bos!!!\n");
+
 
     return (EXIT_SUCCESS);
 }

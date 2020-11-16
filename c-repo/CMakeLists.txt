@@ -74,11 +74,10 @@ set(SOURCE_FILES
         #        dc_fall_2020/week01/dynamic_array_allocation_two_dimen.c
         #        dc_fall_2020/week02-03/MatrisCarpimiDinamik.c
         #        dc_fall_2020/week02-03/MatrisCarpimiStatik.c
-        dc_fall_2020/week04-05/liste.c
-
-#        dc_fall_2020/week04-05/liste_ders.c
-
-
+        #        dc_fall_2020/week04-05/liste.c
+        #        dc_fall_2020/week04-05/liste_ders.c
+        #        dc_fall_2020/week06/ciftYonluListe.c
+        dc_fall_2020/week06/ikiliAramaAgaci.c
 
         )
 
