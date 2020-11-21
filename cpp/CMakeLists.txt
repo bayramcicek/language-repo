@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         #        odevler/w01_SayiTahmin.cpp
         #        odevler/w02_TekCift.cpp
+        odevler/w03_OgrenciListesi-BayramCicek-01.cpp
 
         #        01_main.cpp
         #        01_MerhabaDunya.cpp
