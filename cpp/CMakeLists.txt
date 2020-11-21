@@ -3,13 +3,20 @@ project(cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
-        #        ./odevler/w01_SayiTahmin.cpp
-        #        00_MerhabaDunya.cpp
-        #        00_main.cpp
+        #        odevler/w01_SayiTahmin.cpp
+        #        odevler/w02_TekCift.cpp
 
+        #        01_main.cpp
+        #        01_MerhabaDunya.cpp
 
-        #        01_variables.cpp
-        odevler/w02_TekCift.cpp
+        #        02_variables.cpp
+
+        #        03_classes.cpp
+        #        03_workers.cpp
+        #        03_inheritance.cpp
+        #        03_polymorphism.cpp
+        #        03_files.cpp
+        #        03_exceptions.cpp
 
 
         )
