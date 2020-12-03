@@ -12,14 +12,14 @@
  * 
  */
 
-struct hucre {
+struct dugum {
     int icerik;
-    struct hucre *sonraki;
+    struct dugum *sonraki;
 };
 
-struct hucre *hucre_olustur(int icerik) {
-    struct hucre *a;
-    a = (struct hucre *) malloc(sizeof(struct hucre));
+struct dugum *hucre_olustur(int icerik) {
+    struct dugum *a;
+    a = (struct dugum *) malloc(sizeof(struct dugum));
     if (a == NULL) {
         printf("Heap alaninda yer ayrilamadi ...\n");
         exit(1);
@@ -29,19 +29,19 @@ struct hucre *hucre_olustur(int icerik) {
     return a;
 }
 
-void liste_basina_ekle(int icerik, struct hucre **liste_basi) {
-    struct hucre *a = hucre_olustur(icerik);
+void liste_basina_ekle(int icerik, struct dugum **liste_basi) {
+    struct dugum *a = hucre_olustur(icerik);
     a->sonraki = *liste_basi;
     *liste_basi = a;
 }
 
-void liste_sonuna_ekle(int icerik, struct hucre **liste_basi) {
-    struct hucre *a = hucre_olustur(icerik);
+void liste_sonuna_ekle(int icerik, struct dugum **liste_basi) {
+    struct dugum *a = hucre_olustur(icerik);
     if (*liste_basi == NULL) {
         a->sonraki = *liste_basi;
         *liste_basi = a;
     } else {
-        struct hucre *x = *liste_basi;
+        struct dugum *x = *liste_basi;
         while (x->sonraki != NULL) {
             x = x->sonraki;
         }
@@ -49,7 +49,7 @@ void liste_sonuna_ekle(int icerik, struct hucre **liste_basi) {
     }
 }
 
-void liste_yaz(struct hucre *liste_basi) {
+void liste_yaz(struct dugum *liste_basi) {
     while (liste_basi != NULL) {
         printf("%4d ", liste_basi->icerik);
         liste_basi = liste_basi->sonraki;
@@ -57,7 +57,7 @@ void liste_yaz(struct hucre *liste_basi) {
     printf("\n");
 }
 
-void liste_yaz_recursive(struct hucre *liste_basi) {
+void liste_yaz_recursive(struct dugum *liste_basi) {
     if (liste_basi != NULL) {
         printf("%4d ", liste_basi->icerik);
         liste_yaz_recursive(liste_basi->sonraki);
@@ -66,7 +66,7 @@ void liste_yaz_recursive(struct hucre *liste_basi) {
     }
 }
 
-void tersten_liste_yaz_recursive(struct hucre *liste_basi) {
+void tersten_liste_yaz_recursive(struct dugum *liste_basi) {
 
     if (liste_basi != NULL) {
         tersten_liste_yaz_recursive(liste_basi->sonraki);
@@ -75,10 +75,10 @@ void tersten_liste_yaz_recursive(struct hucre *liste_basi) {
 
 }
 
-void liste_yok_et(struct hucre **liste_basi) {
-    struct hucre *simdiki;
+void liste_yok_et(struct dugum **liste_basi) {
+    struct dugum *simdiki;
     while (*liste_basi != NULL) {
-          simdiki=(*liste_basi);
+        simdiki = (*liste_basi);
         *liste_basi = (*liste_basi)->sonraki;
         free(simdiki);
 //        free(*liste_basi);
@@ -86,8 +86,47 @@ void liste_yok_et(struct hucre **liste_basi) {
     }
 }
 
-void liste_sirali_ekle(int icerik, struct hucre **liste_basi) {
-    struct hucre *a, *b, *eklenen;
+void ilk_ve_son_dugumleri_sil(struct dugum **liste_basi) {
+    if (*liste_basi == NULL) {
+        printf("<Liste bos>");
+    } else if ((*liste_basi)->sonraki == NULL) {
+        printf("<Liste tek elemanli>");
+        struct dugum *temp = (*liste_basi);
+        *liste_basi = NULL;
+        free(temp);
+    } else { // en az 2 elemanli
+        struct dugum *ilk_node;
+
+        // ilk dugumu sil
+        ilk_node = (*liste_basi);
+        *liste_basi = (*liste_basi)->sonraki;
+        free(ilk_node);
+
+        // 2 elemanli ise, kalan tek elemani sil
+        if ((*liste_basi)->sonraki == NULL) {
+            struct dugum *temp = (*liste_basi);
+            *liste_basi = NULL;
+            free(temp);
+        } else { // en az 3+ elemanli
+            struct dugum *sondan_bir_onceki;
+            struct dugum *son_node;
+
+            son_node = (*liste_basi);
+
+            while ((son_node->sonraki) != NULL) {
+                sondan_bir_onceki = son_node;
+                son_node = son_node->sonraki;
+            }
+
+            // son dugumu sil
+            sondan_bir_onceki->sonraki = NULL;
+            free(son_node);
+        }
+    }
+}
+
+void liste_sirali_ekle(int icerik, struct dugum **liste_basi) {
+    struct dugum *a, *b, *eklenen;
     b = *liste_basi;
     while (b != NULL && b->icerik <= icerik) {
         if (b->icerik == icerik) return;
@@ -105,9 +144,9 @@ void liste_sirali_ekle(int icerik, struct hucre **liste_basi) {
     }
 }
 
-void liste_eleman_sil(int silinen, struct hucre **liste_basi) {
-    struct hucre *temp = *liste_basi;
-    struct hucre *once;
+void liste_eleman_sil(int silinen, struct dugum **liste_basi) {
+    struct dugum *temp = *liste_basi;
+    struct dugum *once;
 
     while (temp != NULL && temp->icerik != silinen) {
         once = temp;
@@ -123,8 +162,8 @@ void liste_eleman_sil(int silinen, struct hucre **liste_basi) {
 }
 
 // insertion sort
-void liste_sirala(struct hucre **liste_basi) {
-    struct hucre *a, *b, *c, *d;
+void liste_sirala(struct dugum **liste_basi) {
+    struct dugum *a, *b, *c, *d;
 
     if (*liste_basi == NULL || (*liste_basi)->sonraki == NULL) return;
 
@@ -153,9 +192,9 @@ void liste_sirala(struct hucre **liste_basi) {
     }
 }
 
-void liste_ters_cevir(struct hucre **liste_basi) {
+void liste_ters_cevir(struct dugum **liste_basi) {
 
-    struct hucre *a, *b;
+    struct dugum *a, *b;
 
     a = NULL;
     while ((*liste_basi) != NULL) {
@@ -167,8 +206,8 @@ void liste_ters_cevir(struct hucre **liste_basi) {
     *liste_basi = a;
 }
 
-int ardisik_mi(struct hucre *liste_basi, int anahtar1, int anahtar2) {
-    struct hucre *onceki;
+int ardisik_mi(struct dugum *liste_basi, int anahtar1, int anahtar2) {
+    struct dugum *onceki;
     onceki = NULL;
     while (liste_basi != NULL) {
         if (liste_basi->icerik == anahtar1) break;
@@ -182,12 +221,12 @@ int ardisik_mi(struct hucre *liste_basi, int anahtar1, int anahtar2) {
 }
 
 // ödev - iteratif olarak yaz
-void liste_tersten_yaz(struct hucre *liste_basi) {
+void liste_tersten_yaz(struct dugum *liste_basi) {
 
     // liste boşsa çık
     if (liste_basi == NULL) exit(1);
 
-    struct hucre *temp = liste_basi;
+    struct dugum *temp = liste_basi;
     int uzunluk = 0;
 
     // liste uzunluğunu bul
@@ -215,33 +254,34 @@ void liste_tersten_yaz(struct hucre *liste_basi) {
 
 int main(int argc, char **argv) {
 
-    struct hucre *liste1 = NULL;
+    struct dugum *liste1 = NULL;
 
     liste_basina_ekle(20, &liste1);
     liste_basina_ekle(30, &liste1);
     liste_basina_ekle(200, &liste1);
-    liste_basina_ekle(40, &liste1);
-    liste_basina_ekle(80, &liste1);
+//
+    liste_sonuna_ekle(40, &liste1);
+    liste_sonuna_ekle(80, &liste1);
+    liste_sonuna_ekle(500, &liste1);
+
+    liste_yaz(liste1);
+
+////    liste_yaz_recursive(liste1);
+////    tersten_liste_yaz_recursive(liste1);
+//    liste_tersten_yaz(liste1);
+//
+//    printf("\n");
+////    printf("%d\n", ardisik_mi(liste1, 30, 20));
+////    liste_yok_et(&liste1);
+//    liste_sirala(&liste1);
 //    liste_yaz(liste1);
-
-    liste_sonuna_ekle(400, &liste1);
-    liste_yaz(liste1);
-
-//    liste_yaz_recursive(liste1);
-//    tersten_liste_yaz_recursive(liste1);
-    liste_tersten_yaz(liste1);
-
-    printf("\n");
-//    printf("%d\n", ardisik_mi(liste1, 30, 20));
+//
+//    liste_eleman_sil(80, &liste1);
+//    liste_yaz(liste1);
+//
 //    liste_yok_et(&liste1);
-    liste_sirala(&liste1);
-    liste_yaz(liste1);
-
-    liste_eleman_sil(80, &liste1);
-    liste_yaz(liste1);
-
-    liste_yok_et(&liste1);
-    printf("----- \n");
+    ilk_ve_son_dugumleri_sil(&liste1);
+    printf("\n----- \n");
     liste_yaz(liste1);
     printf("*******\n");
 

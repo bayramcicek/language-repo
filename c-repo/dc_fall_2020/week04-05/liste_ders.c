@@ -13,9 +13,9 @@ struct hucre {
 
 // örnek
 struct id {
-    char *kimlik_no;
     char *ad;
     char *soyad;
+    char *kimlik_no;
     struct id *sonraki; // sonraki liste elemanına işaret eder. (adres tutar)
 };
 
@@ -28,6 +28,19 @@ int main(int argc, char **argv) {
 
     ptr->icerik = 100;
     ptr->sonraki = NULL;
+
+    struct id *ptrq;
+    ptrq = (struct id *) malloc(sizeof(struct id));
+    printf("%lu\n", sizeof(ptrq));
+    printf("%p\n", ptrq);
+
+//    printf("%lu\n", sizeof(ptrq->ad));
+//    printf("%lu\n", sizeof(ptrq->soyad));
+//    printf("%lu\n", sizeof(ptrq->kimlik_no));
+//    printf("%lu\n", sizeof(ptrq->sonraki));
+    printf("%lu\n", sizeof(ptr->icerik)); // 4
+    printf("%lu\n", sizeof(ptr->sonraki)); // 8
+    printf("%lu\n", sizeof(struct hucre)); // 16
 
     return 0;
 }

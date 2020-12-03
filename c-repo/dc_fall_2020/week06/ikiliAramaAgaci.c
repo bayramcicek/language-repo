@@ -1,10 +1,3 @@
-/* 
- * File:   main.c
- * Author: BM
- *
- * Created on 22 Ekim 2014 Çarşamba, 12:58
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,9 +8,9 @@
 #define SENTINEL -100000000
 
 struct dugum {
-    int icerik;
-    struct dugum *sol;
-    struct dugum *sag;
+    int anahtar;
+    struct dugum *sol_link;
+    struct dugum *sag_link;
 };
 
 struct ikili_arama_agaci {
@@ -44,11 +37,10 @@ struct dugum *dugum_olustur(int icerik) {
         printf("Heapte gerekli yer ayrilamadi... exit ...\n");
         exit(1);
     }
-    d->icerik = icerik; //(*d).icerik=icerik;
-    d->sol = d->sag = NULL;
+    d->anahtar = icerik; //(*d).icerik=icerik;
+    d->sol_link = d->sag_link = NULL;
     return d;
 }
-
 
 void ekle(struct ikili_arama_agaci *agac, int icerik) {
     struct dugum *dugum;
@@ -56,28 +48,29 @@ void ekle(struct ikili_arama_agaci *agac, int icerik) {
     struct dugum *geri;
 
     d = agac->kok;
-    while (d != NULL) {
+    while (d != NULL) { // geri, eklenecek düğümün parent'ı
         geri = d;
-        if (icerik < d->icerik) d = d->sol;
-        else if (icerik > d->icerik) d = d->sag;
+        if (icerik < d->anahtar) d = d->sol_link;
+        else if (icerik > d->anahtar) d = d->sag_link;
         else return;
-    }
+    } // bu bittiğinde d -> NULL olur
     dugum = dugum_olustur(icerik);
-    if (agac->kok == NULL) {
+    if (agac->kok == NULL) { // kök yok, oluştur.
         agac->kok = dugum;
         return;
     }
-    if (icerik < geri->icerik) geri->sol = dugum;
-    else geri->sag = dugum;
+    // en az 1 eleman var
+    if (icerik < geri->anahtar) geri->sol_link = dugum;
+    else geri->sag_link = dugum;
 
 }
 
 void inorder_yardimci(struct dugum *kok) {
 
     if (kok == NULL) return;
-    inorder_yardimci(kok->sol);
-    printf("%4d ", kok->icerik);
-    inorder_yardimci(kok->sag);
+    inorder_yardimci(kok->sol_link);
+    printf("%4d ", kok->anahtar);
+    inorder_yardimci(kok->sag_link);
 
 }
 
@@ -90,9 +83,9 @@ void inorder(struct ikili_arama_agaci *agac) {
 void preorder_yardimci(struct dugum *kok) {
 
     if (kok == NULL) return;
-    printf("%4d ", kok->icerik);
-    preorder_yardimci(kok->sol);
-    preorder_yardimci(kok->sag);
+    printf("%4d ", kok->anahtar);
+    preorder_yardimci(kok->sol_link);
+    preorder_yardimci(kok->sag_link);
 
 }
 
@@ -104,9 +97,9 @@ void preorder(struct ikili_arama_agaci *agac) {
 
 void postorder_yardimci(struct dugum *kok) {
     if (kok == NULL) return;
-    postorder_yardimci(kok->sol);
-    postorder_yardimci(kok->sag);
-    printf("%4d ", kok->icerik);
+    postorder_yardimci(kok->sol_link);
+    postorder_yardimci(kok->sag_link);
+    printf("%4d ", kok->anahtar);
 
 }
 
@@ -118,13 +111,13 @@ void postorder(struct ikili_arama_agaci *agac) {
 
 int dugum_sayisi(struct dugum *kok) {
     if (kok == NULL) return 0;
-    return 1 + dugum_sayisi(kok->sol) + dugum_sayisi(kok->sag);
+    return 1 + dugum_sayisi(kok->sol_link) + dugum_sayisi(kok->sag_link);
 }
 
 int yaprak_sayisi(struct dugum *kok) {
     if (kok == NULL) return 0;
-    if (kok->sol == NULL && kok->sag == NULL) return 1;
-    else return yaprak_sayisi(kok->sol) + yaprak_sayisi(kok->sag);
+    if (kok->sol_link == NULL && kok->sag_link == NULL) return 1;
+    else return yaprak_sayisi(kok->sol_link) + yaprak_sayisi(kok->sag_link);
 }
 
 void sil(struct ikili_arama_agaci *agac, int silinen) {
@@ -134,98 +127,102 @@ void sil(struct ikili_arama_agaci *agac, int silinen) {
     struct dugum *d1, *d2;
     int sol;
     while (d != NULL) {
-        if (silinen < d->icerik) {
+        if (silinen < d->anahtar) {
             parent = d;
-            d = d->sol;
+            d = d->sol_link;
             sol = 1;
-        } else if (silinen > d->icerik) {
+        } else if (silinen > d->anahtar) {
             parent = d;
-            d = d->sag;
+            d = d->sag_link;
             sol = 0;
         } else break;
     }
-    if (d == NULL) return;
-    if (d->sol == NULL) { // silinen dugumun solu bos
-        if (parent == NULL) agac->kok = d->sag;
-        else {
-            if (sol == 1) parent->sol = d->sag;
-            else parent->sag = d->sag;
+    if (d == NULL) return; // silinecek düğüm ağaçta yoksa
+    if (d->sol_link == NULL) { // silinen dugumun solu bos
+        if (parent == NULL) agac->kok = d->sag_link; // solu boş olan rootu siliyorsun
+        else { // silinen düğüm root değil ama solu boş
+            if (sol == 1) parent->sol_link = d->sag_link;
+            else parent->sag_link = d->sag_link;
         }
-    } else if (d->sag == NULL) {  // silinen dugumun sagi bos
-        if (parent == NULL) agac->kok = d->sol;
+    } else if (d->sag_link == NULL) {  // silinen dugumun sagi bos
+        if (parent == NULL) agac->kok = d->sol_link;
         else {
-            if (sol == 1) parent->sol = d->sol;
-            else parent->sag = d->sol;
+            if (sol == 1) parent->sol_link = d->sol_link;
+            else parent->sag_link = d->sol_link;
         }
-    }
-        /*  else { // silinen dugumun hem sagi hem de solu dolu
-                 // silinencek dugumun solunun en sagina git
-                 // en sagdaki dugum silinen dugumun konumunu alir
-              d1=d->sol;
-              d2=NULL;
-              while(d1->sag!=NULL){
-                  d2=d1;
-                  d1=d1->sag;
-              }
-              if(d2!=NULL){
-                  d2->sag= d1->sol;
-                  d1->sol=d->sol;
-              }
-              d1->sag = d->sag;
-              if(parent==NULL) agac->kok=d1; // agacin koku degisti
-              else {
-                  if(sol==1) parent->sol=d1;
-                  else parent->sag=d1;
-              }
-          } */
-
-    else { // silinen dugumun hem sagi hem de solu dolu
-        // silinencek dugumun saginin en soluna git
-        // en soldaki dugum silinen dugumun konumunu alir
-        d1 = d->sag;
+    } else { // silinen dugumun hem sagi hem de solu dolu
+        // silinencek dugumun solunun en sagina git
+        // en sagdaki dugum silinen dugumun konumunu alir
+        d1 = d->sol_link;
         d2 = NULL;
-        while (d1->sol != NULL) {
+        while (d1->sag_link != NULL) {
             d2 = d1;
-            d1 = d1->sol;
+            d1 = d1->sag_link;
         }
         if (d2 != NULL) {
-            d2->sol = d1->sag;
-            d1->sag = d->sag;
+            d2->sag_link = d1->sol_link;
+            d1->sol_link = d->sol_link;
         }
-        d1->sol = d->sol;
+        d1->sag_link = d->sag_link;
         if (parent == NULL) agac->kok = d1; // agacin koku degisti
         else {
-            if (sol == 1) parent->sol = d1;
-            else parent->sag = d1;
+            if (sol == 1) parent->sol_link = d1;
+            else parent->sag_link = d1;
         }
     }
+
+//    else { // silinen dugumun hem sagi hem de solu dolu
+//        // silinencek dugumun saginin en soluna git
+//        // en soldaki dugum silinen dugumun konumunu alir
+//        d1 = d->sag;
+//        d2 = NULL;
+//        while (d1->sol != NULL) {
+//            d2 = d1;
+//            d1 = d1->sol;
+//        }
+//        if (d2 != NULL) {
+//            d2->sol = d1->sag;
+//            d1->sag = d->sag;
+//        }
+//        d1->sol = d->sol;
+//        if (parent == NULL) agac->kok = d1; // agacin koku degisti
+//        else {
+//            if (sol == 1) parent->sol = d1;
+//            else parent->sag = d1;
+//        }
+//    }
     free(d);
 }
 
 void yoket(struct dugum **kok) {
     if (*kok != NULL) {
-        yoket(&(*kok)->sol);
-        yoket(&(*kok)->sag);
+        yoket(&(*kok)->sol_link);
+        yoket(&(*kok)->sag_link);
         free(*kok);
         *kok = NULL;
     }
 }
 
-
 int foo(struct dugum *kok) { // ic dugum sayisi
     if (kok == NULL) return 0;
-    else if (kok->sol != NULL || kok->sag != NULL)
-        return 1 + foo(kok->sol) + foo(kok->sag);
+    else if (kok->sol_link != NULL || kok->sag_link != NULL)
+        return 1 + foo(kok->sol_link) + foo(kok->sag_link);
     else return 0;
 }
 
+int foo_ne(struct dugum *kok1, struct dugum *kok2) {
+    if (kok1 == NULL && kok2 == NULL) return 1;
+    if (!kok1 || !kok2) return 0;
+    return foo_ne(kok1->sol_link, kok2->sol_link) &&
+           foo_ne(kok1->sag_link, kok2->sag_link);
+}
 
 int en_kisa_yol_uzunlugu(struct dugum *root) {
     int sol, sag, kucuk, buyuk;
     if (root == NULL) return 0;
     //  if (root->sol==NULL && root->sag==NULL) return 1;
-    sol = en_kisa_yol_uzunlugu(root->sol);
-    sag = en_kisa_yol_uzunlugu(root->sag);
+    sol = en_kisa_yol_uzunlugu(root->sol_link);
+    sag = en_kisa_yol_uzunlugu(root->sag_link);
     if (sol < sag) {
         kucuk = sol;
         buyuk = sag;
@@ -233,55 +230,90 @@ int en_kisa_yol_uzunlugu(struct dugum *root) {
         kucuk = sag;
         buyuk = sol;
     }
-    if (root->sol != NULL && root->sag != NULL) return kucuk + 1;
+    if (root->sol_link != NULL && root->sag_link != NULL) return kucuk + 1;
     return buyuk + 1;
 }
 
+int ikili_agac_dengeli_mi(struct dugum *kok) {
+    int sol_yukseklik, sag_yukseklik;
+    static int kontrol, kok_tut;
+
+    // o anki düğüm bos ise
+    if (kok == NULL) return 0;
+
+    // demek ki en az 1 düğüm var.
+    if (kontrol != -1) {  // kökün içeriğini tut
+        kok_tut = kok->anahtar;
+        kontrol = -1;  // bu koşula sadece 1 defa girdik
+    }
+
+    // düğümün solu ve sağı boş ise
+    if (kok->sol_link == NULL && kok->sag_link == NULL) return 1;
+
+    sol_yukseklik = ikili_agac_dengeli_mi(kok->sol_link);
+    sag_yukseklik = ikili_agac_dengeli_mi(kok->sag_link);
+
+    if (sol_yukseklik == -1 ||
+        sag_yukseklik == -1 ||
+        abs(sol_yukseklik - sag_yukseklik) > 1) {
+        return 0;  // en az 1 düğümün yüksekliği dengesiz ise çık
+    } else {
+        /* eğer bu değişkenler eşit ise köke kadar tüm düğümler dengelidir.
+         * öyleyse ağaç dengelidir. */
+        if (kok->anahtar == kok_tut) return 1;
+
+        // hangi yükseklik büyükse onu döndür.
+        if (sol_yukseklik > sag_yukseklik) return sol_yukseklik + 1;
+        else return sag_yukseklik + 1;
+    }
+}
 
 int main(int argc, char **argv) {
     struct ikili_arama_agaci *agac;
+    struct ikili_arama_agaci *agac1;
     ikili_arama_agaci_olustur(&agac);
+    ikili_arama_agaci_olustur(&agac1);
 
     ekle(agac, 100);
-    // printf("En kisa yol uzunlugu: %d\n",agac->kok);
-
+//    // printf("En kisa yol uzunlugu: %d\n",agac->kok);
     ekle(agac, 50);
-
     ekle(agac, 200);
-
     ekle(agac, 25);
+//    ekle(agac, 75);
 
-    ekle(agac, 75);
+    ekle(agac1, 89);
+    ekle(agac1, 95);
+    ekle(agac1, 15);
+    ekle(agac1, 93);
+//    ekle(agac1, 101);
 
-    ekle(agac, 20);
+    int res = foo_ne(agac->kok, agac1->kok);
+    printf("res: %d\n", res);
 
-    ekle(agac, 35);
+//    ekle(agac, 20);
+//
+//    ekle(agac, 35);
+//    ekle(agac, 98);
+//    ekle(agac, 99);
+//    ekle(agac, 500);
+//    ekle(agac, 400);
+//
+//    ekle(agac, 450);
+//    ekle(agac, 150);
+//    ekle(agac, 600);
+//    ekle(agac, 30);
+//    ekle(agac, 173);
+//
+//    inorder(agac);
+//    preorder(agac);
 
-    ekle(agac, 98);
-
-    ekle(agac, 99);
-
-    ekle(agac, 500);
-
-    ekle(agac, 400);
-
-    ekle(agac, 300);
-
-    ekle(agac, 210);
-
-    ekle(agac, 375);
-
-    ekle(agac, 30);
-
-    ekle(agac, 173);
+//    int dengelimi = ikili_agac_dengeli_mi(agac->kok);
+//    printf("dengeli mi: %d\n", dengelimi);
 
 
-    printf("En kisa yol uzunlugu: %d\n", en_kisa_yol_uzunlugu(agac->kok));
-    inorder(agac);
 
-    //  printf("Ic dugum sayisi: %4d\n",foo(agac->kok));
-
-    //   printf("En kisa yol uzunlugu: %d\n",en_kisa_yol_uzunlugu(agac->kok));
+//  printf("Ic dugum sayisi: %4d\n",foo(agac->kok));
+//   printf("En kisa yol uzunlugu: %d\n",en_kisa_yol_uzunlugu(agac->kok));
 
     return (EXIT_SUCCESS);
 }
