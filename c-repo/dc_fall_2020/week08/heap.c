@@ -202,7 +202,7 @@ int main(int argc, char **argv) {
     printf("heap mi: %d\n", heap_mi(heap));
 //
 //    heap_insert(heap, 42);
-//
+//    heap_sort(heap);
 //    print_heap(heap);
 //
 //    printf("heap mi: %d\n", heap_mi(heap));
