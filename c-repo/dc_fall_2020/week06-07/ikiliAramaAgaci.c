@@ -66,12 +66,10 @@ void ekle(struct ikili_arama_agaci *agac, int icerik) {
 }
 
 void inorder_yardimci(struct dugum *kok) {
-
     if (kok == NULL) return;
     inorder_yardimci(kok->sol_link);
     printf("%4d ", kok->anahtar);
     inorder_yardimci(kok->sag_link);
-
 }
 
 void inorder(struct ikili_arama_agaci *agac) {
@@ -86,7 +84,6 @@ void preorder_yardimci(struct dugum *kok) {
     printf("%4d ", kok->anahtar);
     preorder_yardimci(kok->sol_link);
     preorder_yardimci(kok->sag_link);
-
 }
 
 void preorder(struct ikili_arama_agaci *agac) {
@@ -100,7 +97,6 @@ void postorder_yardimci(struct dugum *kok) {
     postorder_yardimci(kok->sol_link);
     postorder_yardimci(kok->sag_link);
     printf("%4d ", kok->anahtar);
-
 }
 
 void postorder(struct ikili_arama_agaci *agac) {

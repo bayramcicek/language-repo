@@ -107,7 +107,6 @@ void print_hash_table(struct hash_tablosu *hash_table) {
             printf("\n");
         }
     } else printf("Hash Tablosu Bos ...\n");
-
 }
 
 int delete_dugum_liste(struct CELL **header, char *anahtar) {

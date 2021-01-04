@@ -59,7 +59,6 @@ void print_heap(struct heap *heap) {
     int i;
     for (i = 0; i < heap->eleman_sayisi; i++) printf("%4d", heap->dizi[i].key);
     printf("\n");
-
 }
 
 void initialize_heap(struct heap *heap, int eleman_sayisi, int aralik) {
@@ -146,7 +145,6 @@ void buble_up(struct heap *heap, int index) {
         heap->dizi[index].key = temp_key;
         index = parent;
         parent = (index - 1) / 2;
-
     }
 }
 
