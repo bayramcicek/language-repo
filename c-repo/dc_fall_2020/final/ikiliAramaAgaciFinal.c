@@ -264,44 +264,37 @@ int ikili_agac_dengeli_mi(struct dugum *kok) {
     }
 }
 
+
+/*Buna göre iklili bir ağaçta tek çocuğa sahip olan düğümlerin sayısını bulan ve
+ * tanımlaması aşağıdaki gibi olan fonksiyonu yazınız?*/
+int tek_cocuklu_dugum_sayisi(struct dugum *kok) {
+    if (kok == NULL) return 0;
+
+    // o anki düğümün sadece sol çocuğu varsa.
+    if (kok->sol_link != NULL && kok->sag_link == NULL) {
+        return 1 + tek_cocuklu_dugum_sayisi(kok->sol_link);
+    } else if (kok->sag_link != NULL && kok->sol_link == NULL) {  // o anki düğümün sadece sağ çocuğu varsa.
+        return 1 + tek_cocuklu_dugum_sayisi(kok->sag_link);
+    } else {  // işlemleri recursive olarak yap ve sonucu geri gönder.
+        return tek_cocuklu_dugum_sayisi(kok->sol_link) + tek_cocuklu_dugum_sayisi(kok->sag_link);
+    }
+}
+
 int main(int argc, char **argv) {
     struct ikili_arama_agaci *agac;
-    struct ikili_arama_agaci *agac1;
     ikili_arama_agaci_olustur(&agac);
-    ikili_arama_agaci_olustur(&agac1);
 
-    ekle(agac, 100);
-//    // printf("En kisa yol uzunlugu: %d\n",agac->kok);
     ekle(agac, 50);
-    ekle(agac, 200);
-    ekle(agac, 25);
-//    ekle(agac, 75);
-
-    ekle(agac1, 89);
-    ekle(agac1, 95);
-    ekle(agac1, 15);
-    ekle(agac1, 93);
-//    ekle(agac1, 101);
-
-    int res = foo_ne(agac->kok, agac1->kok);
-    printf("res: %d\n", res);
-
-//    ekle(agac, 20);
-//
-//    ekle(agac, 35);
-//    ekle(agac, 98);
-//    ekle(agac, 99);
-//    ekle(agac, 500);
-//    ekle(agac, 400);
-//
-//    ekle(agac, 450);
-//    ekle(agac, 150);
-//    ekle(agac, 600);
-//    ekle(agac, 30);
-//    ekle(agac, 173);
-//
-//    inorder(agac);
+    ekle(agac, 40);
+    ekle(agac, 60);
+    ekle(agac, 70);
+    ekle(agac, 65);
+    ekle(agac, 66);
+    ekle(agac, 41);
+    ekle(agac, 39);
 //    preorder(agac);
+    int a = tek_cocuklu_dugum_sayisi(agac->kok);
+    printf("res: %d", a);
 
 //    int dengelimi = ikili_agac_dengeli_mi(agac->kok);
 //    printf("dengeli mi: %d\n", dengelimi);
