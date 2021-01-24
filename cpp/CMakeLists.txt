@@ -5,20 +5,24 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         #        odevler/w01_SayiTahmin.cpp
         #        odevler/w02_TekCift.cpp
-        odevler/w03_OgrenciListesi-BayramCicek-01.cpp
+        #        odevler/w03_OgrenciListesi-BayramCicek-01.cpp
 
-        #        01_main.cpp
-        #        01_MerhabaDunya.cpp
-
-        #        02_variables.cpp
-
-        #        03_classes.cpp
-        #        03_workers.cpp
-        #        03_inheritance.cpp
-        #        03_polymorphism.cpp
-        #        03_files.cpp
-        #        03_exceptions.cpp
+        #        ./acikkaynakgelistirme/01_main.cpp
+        #        ./acikkaynakgelistirme/01_MerhabaDunya.cpp
+        #        ./acikkaynakgelistirme/02_variables.cpp
+        #        ./acikkaynakgelistirme/03_classes.cpp
+        #        ./acikkaynakgelistirme/03_workers.cpp
+        #        ./acikkaynakgelistirme/03_inheritance.cpp
+        #        ./acikkaynakgelistirme/03_polymorphism.cpp
+        #        ./acikkaynakgelistirme/03_files.cpp
+        #        ./acikkaynakgelistirme/03_exceptions.cpp
 
 
-        )
+        #        sololearn/s00_first.cpp
+        #        sololearn/s01_variables.cpp
+
+        #        sololearn/s02_input.cpp
+
+
+        sololearn/s03_arithmetic.cpp)
 add_executable(cpp ${SOURCE_FILES})
