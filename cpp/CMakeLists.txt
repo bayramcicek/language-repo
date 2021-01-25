@@ -17,12 +17,14 @@ set(SOURCE_FILES
         #        ./acikkaynakgelistirme/03_files.cpp
         #        ./acikkaynakgelistirme/03_exceptions.cpp
 
-
         #        sololearn/s00_first.cpp
         #        sololearn/s01_variables.cpp
-
         #        sololearn/s02_input.cpp
 
+        #        sololearn/s03_arithmetic.cpp
 
-        sololearn/s03_arithmetic.cpp)
+        sololearn/s04_conditions.cpp
+
+
+        )
 add_executable(cpp ${SOURCE_FILES})
