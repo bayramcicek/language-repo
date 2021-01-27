@@ -23,8 +23,8 @@ set(SOURCE_FILES
 
         #        sololearn/s03_arithmetic.cpp
 
-        sololearn/s04_conditions.cpp
-
+        #        sololearn/s04_conditions.cpp
+        sololearn/s05_datatypes.cpp
 
         )
 add_executable(cpp ${SOURCE_FILES})
