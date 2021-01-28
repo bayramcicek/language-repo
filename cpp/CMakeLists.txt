@@ -20,11 +20,16 @@ set(SOURCE_FILES
         #        sololearn/s00_first.cpp
         #        sololearn/s01_variables.cpp
         #        sololearn/s02_input.cpp
-
         #        sololearn/s03_arithmetic.cpp
-
         #        sololearn/s04_conditions.cpp
-        sololearn/s05_datatypes.cpp
+        #        sololearn/s05_datatypes.cpp
+        #        sololearn/s06_arrays.cpp
+        #        sololearn/s07_pointers.cpp
+        #        sololearn/s08_memory.cpp
+        #        sololearn/s09_sizeof.cpp
+
+        sololearn/s09_quiz.cpp
+
 
         )
 add_executable(cpp ${SOURCE_FILES})
