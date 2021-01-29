@@ -27,8 +27,13 @@ set(SOURCE_FILES
         #        sololearn/s07_pointers.cpp
         #        sololearn/s08_memory.cpp
         #        sololearn/s09_sizeof.cpp
-
-        sololearn/s09_quiz.cpp
+        #        sololearn/s09_quiz.cpp
+        #        sololearn/s10_functions.cpp
+        #        sololearn/s11_random.cpp
+        #        sololearn/s12_overloading.cpp
+        #        sololearn/s13_recursion.cpp
+        #        sololearn/s14_array_and_functions.cpp
+        sololearn/s15_quiz_palindrome.cpp
 
 
         )
