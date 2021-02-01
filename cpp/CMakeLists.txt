@@ -33,7 +33,14 @@ set(SOURCE_FILES
         #        sololearn/s12_overloading.cpp
         #        sololearn/s13_recursion.cpp
         #        sololearn/s14_array_and_functions.cpp
-        sololearn/s15_quiz_palindrome.cpp
+        #        sololearn/s15_quiz_palindrome.cpp
+        #        sololearn/s16_object.cpp
+        #        sololearn/s17_class.cpp
+        #        sololearn/s18_abstr_encaps.cpp
+        #        sololearn/s19_access_specifiers.cpp
+        #        sololearn/s20_constructors.cpp
+        #        sololearn/s21_constructors_2.cpp
+        sololearn/s22_quiz_queue_management.cpp
 
 
         )
