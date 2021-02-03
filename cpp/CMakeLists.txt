@@ -40,7 +40,14 @@ set(SOURCE_FILES
         #        sololearn/s19_access_specifiers.cpp
         #        sololearn/s20_constructors.cpp
         #        sololearn/s21_constructors_2.cpp
-        sololearn/s22_quiz_queue_management.cpp
+        #        sololearn/s22_quiz_queue_management.cpp
+
+        #        sololearn/s23_class/MyClass.cpp
+        #        sololearn/s23_class/MyClass.h
+        #        sololearn/s24_destructor/s24_destructors.cpp
+        #        sololearn/s24_destructor/s24_destructors.h
+        sololearn/s25_const/s25_const.cpp
+        sololearn/s25_const/s25_const.h
 
 
         )
