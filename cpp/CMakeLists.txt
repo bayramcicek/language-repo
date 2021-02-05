@@ -41,13 +41,21 @@ set(SOURCE_FILES
         #        sololearn/s20_constructors.cpp
         #        sololearn/s21_constructors_2.cpp
         #        sololearn/s22_quiz_queue_management.cpp
-
         #        sololearn/s23_class/MyClass.cpp
         #        sololearn/s23_class/MyClass.h
         #        sololearn/s24_destructor/s24_destructors.cpp
         #        sololearn/s24_destructor/s24_destructors.h
-        sololearn/s25_const/s25_const.cpp
-        sololearn/s25_const/s25_const.h
+        #        sololearn/s25_const/s25_const.cpp
+        #        sololearn/s25_const/s25_const.h
+        #        sololearn/s26_initializers.cpp
+        #        sololearn/s27_initializers/Init.cpp
+        #        sololearn/s27_initializers/Init.h
+        #        sololearn/s28_composition/Birthday.h
+        #        sololearn/s28_composition/Person.cpp
+        #        sololearn/s29_friend.cpp
+        #        sololearn/s30_this.cpp
+        #        sololearn/s31_operator_overloading.cpp
+        sololearn/s32_quiz.cpp
 
 
         )
