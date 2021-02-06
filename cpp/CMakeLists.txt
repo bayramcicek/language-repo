@@ -55,7 +55,13 @@ set(SOURCE_FILES
         #        sololearn/s29_friend.cpp
         #        sololearn/s30_this.cpp
         #        sololearn/s31_operator_overloading.cpp
-        sololearn/s32_quiz.cpp
+        #        sololearn/s32_quiz.cpp
+        #        sololearn/s33_inheritance.cpp
+        #        sololearn/s34_protected.cpp
+        #        sololearn/s35_derived_const_dest.cpp
+        #        sololearn/s36_polymorphisim.cpp
+        #        sololearn/s37_virtual_func.cpp
+        sololearn/s38_abstraction.cpp
 
 
         )
