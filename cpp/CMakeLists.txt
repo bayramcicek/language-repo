@@ -61,8 +61,18 @@ set(SOURCE_FILES
         #        sololearn/s35_derived_const_dest.cpp
         #        sololearn/s36_polymorphisim.cpp
         #        sololearn/s37_virtual_func.cpp
-        sololearn/s38_abstraction.cpp
-
+        #        sololearn/s38_abstraction.cpp
+        #        sololearn/s39_quiz.cpp
+        #        sololearn/s40_func_templates.cpp
+        #        sololearn/s41_class_templates.cpp
+        #        sololearn/s42_template_specialization.cpp
+        #        sololearn/s43_exceptions.cpp
+        #        sololearn/s44_exception_2.cpp
+        #        sololearn/s45_files.cpp
+        #        sololearn/s46_files_2.cpp
+        #        sololearn/s47_files_3.cpp
+        #        sololearn/s48_quiz.cpp
+        sololearn/s49_test.cpp
 
         )
 add_executable(cpp ${SOURCE_FILES})
